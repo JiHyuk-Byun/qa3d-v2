@@ -1,0 +1,36 @@
+model:
+  model_name: Qwen/Qwen2-VL-2B-Instruct-GPTQ-Int4
+  use_openai_api: False
+  api_key:
+  temperature: 1.0
+  max_tokens: 4096
+  n_choices: 3
+
+
+experiement:
+  out_dir: outputs/
+  batch_inference: True
+  n_batch: 2
+  n_workers: 4
+  prefetch: 2
+
+prompt:
+  template_dir: assets/prompt_templates
+  prompt_type: scoring
+  input_types:
+    geometry: ['rgb', 'normal']
+    texture: ['rgb', 'albedo']
+    material: ['rgb', 'metallic', 'roughness']
+    plausibility: ['rgb']
+    artifacts: ['rgb']
+    preference: ['rgb']
+
+data:
+  src_path: assets/gobajverse_280k
+  meta_path: assets/gobjaverse_280k.json
+  exemple:
+    use_exemple: True
+    num_example: 5 
+    iter_per_exemple: 3
+    meta_path: assets/example_scores.json
+

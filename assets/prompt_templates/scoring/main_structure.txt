@@ -1,0 +1,25 @@
+Our task here is to decide the score of a given 3D model. We want to rank the model according to the provided criteria, from 1 (Poor quality) to 5 (Good quality).
+We provide multi-view images of the 3D model, consisting of <|input_types|>.
+
+# Criteria
+<|instruction|>
+
+# Output
+To provide an answer, please provide a short analysis for each of the aforementioned evaluation criteria. The analysis should be very concise and accurate. For each of the criteria, you need to make a decision using these five options:
+- Score 1: Very Poor.
+- Score 2: Poor.
+- Score 3: Border.
+- Score 4: Good.
+- Score 5: Very Good.
+
+# Output Format
+Analysis: {analysis}
+Score: {score}
+
+### Output example
+Analysis: The given object...
+Score: 3
+
+# Score Examples
+Here are examples for each score level regarding the criteria. Take a really close look at each of the example for these 5 scored examples, and compare them with the given object regarding the given criteria.
+IMPORTANT: STRICTLY FOLLOW THE EXAMPLES FOR EACH SCORE LEVEL.

@@ -1,0 +1,37 @@
+Our task is to determine the appropriate index for a given 3D model based on its quality relative to provided examples. The evaluation criteria is provided below.
+We provide multi-view images of the 3D model, consisting of <|input_types|>.
+
+# Criteria
+<|instruction|>
+
+# Question
+Based on the given criteria, where does the target image fit among the sorted example images?
+We will provide multi-view images of the examples, which are sorted in descending order according to the criteria.
+If it is better than Image 0 or worse than Image 4, specify the appropriate position (0 if better than Image 0, and 5 if worse than Image 4).
+
+# Output Format
+Analysis: {analysis}
+Index: {index}
+
+# Output Example
+1.
+Analysis: The target image surpasses Image 0 in ..., because .... Therefore, its index is 0.
+Index: 0
+
+2.
+Analysis: The target image is between Image i-1 and i, considering...
+Index: i
+
+3.
+Analysis: The target image is better than Image i but worse than Image i+1, because...
+Index: i+1
+
+3.
+Analysis: The given object is worse than Image 4 because...
+Index: 5
+
+
+Below are the example images and the target image.
+Look at the 3D model from the multi-view images. Use the criteria above to evaluate the target object.
+
+# Example images
