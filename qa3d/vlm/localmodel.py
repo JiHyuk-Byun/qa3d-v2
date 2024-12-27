@@ -3,7 +3,7 @@ import os
 from typing import Dict
 from transformers import AutoProcessor
 from vllm import LLM, SamplingParams
-from .basemodel import BaseModel, Response
+from .basemodel import BaseModel
 
 #parsing 할 필요없이 알아서 이미지가 위치 찾아서 감.
 class LocalInferModel(BaseModel):
@@ -14,15 +14,25 @@ class LocalInferModel(BaseModel):
                  n_choices: int,
                  api_key: str=None,
                  )->None:
+        super().__init__(model_name=model_name,
+                         temperature=temperature,
+                         max_tokens=max_tokens,
+                         n_choices=n_choices,
+                         api_key = api_key)        
+        
+        self.processor, self.sampling_params, self.client = self._init_client()
+        
+    def _init_client(self, 
+                     gpu_mem_util: int=0.8, 
+                     pipe_parallel_size: int=1,
+                     max_model_len: int=1,
+                     limit_mm_per_prompt: dict={'image': 1}):
         
         
-        self.model_name = model_name
-        self.max_tokens = max_tokens
-        self.client = LLM(model=model_name, gpu_memory_utilization=0.8, pipeline_parallel_size=1,
-                    max_model_len=1,limit_mm_per_prompt={'image': 1},)#WHY?
-
-        self.processor = AutoProcessor.from_pretrained(model_name)
-        self.sampling_params = SamplingParams(temperature=temperature, max_tokens=max_tokens)
+        return (AutoProcessor.from_pretrained(self.model_name),
+                SamplingParams(n=self.n_choices, temperature=self.temperature, max_tokens=self.max_tokens),
+                LLM(model=self.model_name, gpu_memory_utilization=gpu_mem_util, pipeline_parallel_size=pipe_parallel_size,
+                    max_model_len=max_model_len,limit_mm_per_prompt=limit_mm_per_prompt))
         
     def _make_llm_input(processor, content, input_images):
         messages = [{'role': 'user', 'content': content}]
@@ -41,20 +51,33 @@ class LocalInferModel(BaseModel):
         
     
     # for 1 question in iter * batch
-    def question_and_answer(self, question, input_images, n_choices):
-        inputs = []
-        inputs.append(self._make_llm_input(self.processor, question, input_images))
+    # def question_and_answer(self, question, input_images):
+    #     inputs = []
+    #     inputs.append(self._make_llm_input(self.processor, question, input_images))
         
-        try:
-            answer = self.client.generate(inputs, sampling_params=self.sampling_params, use_tqdm=True)
-            err = None
-            response = []
-        except Exception as e:
-            answer = None
-            err= e
+    #     try:
+    #         answer = self.client.generate(inputs, sampling_params=self.sampling_params, use_tqdm=True)
+    #         err = None
+    #         response = []
+    #     except Exception as e:
+    #         answer = None
+    #         err= e
         
-        return Response(answer, err)
+    #     return Response(answer, err)
     
+    # def _make_llm_input(self, question):
+    #     messages = [{'role': 'user', 'content': content}]
+    #     prompt = processor.apply_chat_template(
+    #         messages,
+    #         tokenize=False,
+    #         add_generation_prompt=True,
+    #     )
+    #     mm_data = {'image': image_inputs}
+
+    #     return {
+    #         'prompt': prompt,
+    #         'multi_modal_data': mm_data
+    #     }
     
         # outputs = model.generate(inputs, sampling_params=sampling_params, use_tqdm=True) # batch_size * num_criterion * num_histogram
         # texts = [x.outputs[0].text for x in outputs]

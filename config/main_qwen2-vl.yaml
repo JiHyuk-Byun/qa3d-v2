@@ -6,31 +6,36 @@ model:
   max_tokens: 4096
   n_choices: 3
 
-
-experiement:
+experiment:
   out_dir: outputs/
   batch_inference: True
+
+data:
+  src_path: assets/gobajverse_280k
+  meta_path: assets/gobjaverse_280k.json
+  example:
+    use_example: True
+    num_level: 5 
+    num_example_sampling: 3
+    sample_interval: 20
+    sample_offset: 0
+    meta_path: assets/example_scores.json
   n_batch: 2
   n_workers: 4
   prefetch: 2
+  pin_memory: False
 
 prompt:
   template_dir: assets/prompt_templates
   prompt_type: scoring
   input_types:
-    geometry: ['rgb', 'normal']
+    geometry: ['rgb', 'normal map']
     texture: ['rgb', 'albedo']
-    material: ['rgb', 'metallic', 'roughness']
+    material: ['rgb', 'metallic map', 'roughness map']
     plausibility: ['rgb']
     artifacts: ['rgb']
     preference: ['rgb']
 
-data:
-  src_path: assets/gobajverse_280k
-  meta_path: assets/gobjaverse_280k.json
-  exemple:
-    use_exemple: True
-    num_example: 5 
-    iter_per_exemple: 3
-    meta_path: assets/example_scores.json
-
+stat:
+  src_path: assets/splits/
+  out_dir: outputs/stat
