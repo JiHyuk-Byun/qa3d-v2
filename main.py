@@ -32,7 +32,7 @@ def main():
     stat_pilot.mark_processing()
     
     processed_gids: List[str] = stat_pilot.get_processed_gids(split_idx)
-    print(f"Assigned split: {split_idx}\n Number of processed gids: {len(processed_gids)}")
+    print(f"Assigned split: {split_idx}\nNumber of processed gids: {len(processed_gids)}")
     
 # ToDo1: Load VLM
     vlm_loader = VLMLoader(**cfg.model)
@@ -71,13 +71,12 @@ def main():
         # for answer in answers:
         #     print(answer)
         #todo5: answer들을 저장하기. 각 batch 별로: n_choices*num_example_sampling
-        print(f'[batch {batch_idx}/{n_iterations}] outputs: {len(batch_answers)},'
+        print(f'[batch {batch_idx+1}/{n_iterations}] outputs: {len(batch_answers)},'
               f' time: {end_time - start_time:.2f} s')
         
         save_answers(save_dir, batch_inputset, batch_answers)
 
         stat_pilot.write_processed_gids([asset.gid for asset in batch])
-
         
     stat_pilot.mark_finished()
 
@@ -89,4 +88,4 @@ if __name__ == '__main__':
 # TODO 1. inputset class 만들어서 batch input 다시 만들기 v
 # TODO 2. _make_llm_input 함수 정의하기 v
 # TODO 3. question_and_answer 뽑기 v 
-# TODO 4. _save_answers
+# TODO 4. _save_answers v

@@ -58,7 +58,8 @@ class OpenaiApiModel(BaseModel):
                 
             print("response:", response)
             print("error: ", err)
-            answers.append({'answers': answers,
+            
+            answers.append({'answers': response,
                             'error': err})
             
         return answers

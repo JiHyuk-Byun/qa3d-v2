@@ -23,11 +23,13 @@ class StatPilot:
         
         self.marks_dir = osp.join(self.out_dir, 'marks')
         self.splits_dir = osp.join(self.out_dir, 'splits')
+        self.error_dir = osp.join(self.out_dir, 'error')
         self._init_stat_dirs()
 
     def _init_stat_dirs(self):   
         os.makedirs(osp.join(self.marks_dir, "processing"), exist_ok=True)
         os.makedirs(osp.join(self.marks_dir, "finished"), exist_ok=True)
+        os.makedirs(osp.join(self.marks_dir, "error"), exist_ok=True)
         os.makedirs(self.splits_dir, exist_ok=True)
                 
     def find_unmarked_split(self):
@@ -99,7 +101,7 @@ class StatPilot:
         with open(path_processing, 'w') as f:
             info = [self.ip, self.gpu_id, self.pid, self.start_time]
             f.write("\n".join(info))
-        
+        []
         self.write_processed_gids([""])
             
             
