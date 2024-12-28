@@ -12,7 +12,8 @@ from .input_set import InputSet
 class PromptBuilder:
     def __init__(self, template_dir: str,
                  prompt_type: Literal['scoring', 'indexing'],
-                 input_types: Dict[str, List[str]]):
+                 input_types: Dict[str, List[str]],
+                 show_prompt: bool):
         super().__init__()
         
         self.template_dir = template_dir
@@ -20,6 +21,7 @@ class PromptBuilder:
         self.input_types = input_types
         self.criteria = list(input_types.keys())
         self.main_structure, self.criteria_instructions = self._read_templates()
+        self.show_prompt = show_prompt
         
         self.prompt: dict = self._generate_text_prompt()
     
@@ -45,7 +47,8 @@ class PromptBuilder:
             # insert instructions
             input_text = input_text.replace('<|instruction|>', instruction)
             
-            print(f'Criterion: {criterion}\nPrompt:\n{input_text}')
+            if self.show_prompt:
+                print(f'Criterion: {criterion}\nPrompt:\n{input_text}')
             text_prompt = [{'type': 'text',
                             'text': input_text}]
         

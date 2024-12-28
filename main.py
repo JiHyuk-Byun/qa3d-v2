@@ -16,6 +16,7 @@ from utils.save_answers import save_answers
 
 parser = ArgumentParser()
 parser.add_argument('--config', '-c', type=str, default='config/main_gpt4o.yaml')
+parser.add_argument('--show_prompt', '-p', type=bool, default=False)
 
 args = parser.parse_args()
 
@@ -33,20 +34,24 @@ def main():
     
     processed_gids: List[str] = stat_pilot.get_processed_gids(split_idx)
     print(f"Assigned split: {split_idx}\nNumber of processed gids: {len(processed_gids)}")
-    
+    print("="*46)
 # ToDo1: Load VLM
     vlm_loader = VLMLoader(**cfg.model)
-    print("Loading VLM...")
+    print("\nLoading VLM...")
     vlm_loader.load_vlm()
     model = vlm_loader.model
     print(vlm_loader)
+    print("="*46)
 # ToDo2: load examplar and build Data Manager
+    print("\nLoading data and prompts...")
     data_manager = DataManager(**cfg.data, criteria=list(cfg.prompt.input_types.keys()))
     data_manager.prepare()
 # ToDo3: Text Prompt build
-    prompt_builder = PromptBuilder(**cfg.prompt)
+    prompt_builder = PromptBuilder(**cfg.prompt, show_prompt=args.show_prompt)
 # ToDo4: DataLoader
-    data_manager.register_gids_to_process(split_path, processed_gids)
+    data_lst = data_manager.register_gids_to_process(split_path, processed_gids)
+    print(f"=========Number of gids to process: {len(data_lst)}=========")
+    
     dataloader = data_manager.load_dataloader()
     n_iterations = len(dataloader)
     start_time = time.time()
@@ -89,3 +94,5 @@ if __name__ == '__main__':
 # TODO 2. _make_llm_input 함수 정의하기 v
 # TODO 3. question_and_answer 뽑기 v 
 # TODO 4. _save_answers v
+# TODO 5. vllm model 
+# TODO 6. output parsing

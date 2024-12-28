@@ -55,7 +55,8 @@ class DataManager:
         
         self.data_lst = [gid for gid in split_gids if gid not in processed_gids]
         
-        print(f"Number of gids to process: {len(self.data_lst)}")
+        return self.data_lst
+
 
     
     def sample_and_pair_examplars(self, batch)->List[Tuple[Asset, Dict[str, np.ndarray]]]:
