@@ -5,7 +5,6 @@ from openai import OpenAI
 
 from .basemodel import BaseModel
 
-# parsing 해서 널어줘야.
 class OpenaiApiModel(BaseModel):
     def __init__(self, model_name:    str,
                  temperature:   float,
@@ -59,7 +58,7 @@ class OpenaiApiModel(BaseModel):
             
             except Exception as e:
                 err = e
-                response = [str(e)]
+                response = [str(e)]*self.n_choices
                 
             print("response:", response)
             

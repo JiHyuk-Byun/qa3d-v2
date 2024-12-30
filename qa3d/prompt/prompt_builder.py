@@ -8,23 +8,24 @@ from ..data import Examplar, ExamplarManager
 from ..data import Asset
 from .input_set import InputSet
 
-# Parent 
 class PromptBuilder:
     def __init__(self, template_dir: str,
                  prompt_type: Literal['scoring', 'indexing'],
                  input_types: Dict[str, List[str]],
-                 show_prompt: bool):
+                 show_prompt: bool,
+                 use_example: bool):
         super().__init__()
         
+        self.use_example = use_example
+        self.prompt_type = prompt_type if use_example else 'no_examples'
+        self.input_types = input_types 
+
         self.template_dir = template_dir
-        self.prompt_type = prompt_type
-        self.input_types = input_types
         self.criteria = list(input_types.keys())
         self.main_structure, self.criteria_instructions = self._read_templates()
-        self.show_prompt = show_prompt
-        
+                                
+        self.show_prompt = show_prompt        
         self.prompt: dict = self._generate_text_prompt()
-    
 
     def _read_templates(self):
         with open(osp.join(self.template_dir, self.prompt_type, 'main_structure.txt')) as f:
@@ -72,14 +73,14 @@ class PromptBuilder:
             
             # Insert examplar
             # lower level, higher score.
-            
-            for level, examplar in enumerate(examplars):
-                examplar_gids.append(examplar.gid)
-                examplar_caption = self._get_examplar_caption(level)
-                examplar_img_prompt, examplar_img = self._get_image_prompt(examplar, criterion)
+            if self.use_example:
+                for level, examplar in enumerate(examplars):
+                    examplar_gids.append(examplar.gid)
+                    examplar_caption = self._get_examplar_caption(level)
+                    examplar_img_prompt, examplar_img = self._get_image_prompt(examplar, criterion)
 
-                criterion_prompt.extend([*examplar_caption, *examplar_img_prompt])
-                input_images.extend(examplar_img)
+                    criterion_prompt.extend([*examplar_caption, *examplar_img_prompt])
+                    input_images.extend(examplar_img)
                 
             # Insert target asset
             asset_caption = [{'type': 'text',

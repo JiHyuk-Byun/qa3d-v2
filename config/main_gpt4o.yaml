@@ -14,7 +14,6 @@ data:
   src_path: datasets/gobjaverse_280k_test/
   meta_path: datasets/gobjaverse_280k_test.json
   example:
-    use_example: True
     num_level: 5 
     num_example_sampling: 3
     sample_interval: 0
@@ -28,6 +27,7 @@ data:
 prompt:
   template_dir: assets/prompt_templates
   prompt_type: scoring
+  use_example: True
   input_types:
     geometry: ['rgb', 'normal_map']
     texture: ['rgb', 'albedo']

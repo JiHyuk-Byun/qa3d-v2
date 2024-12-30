@@ -16,7 +16,6 @@ class Examplar(Asset):
 
 class ExamplarManager:
     def __init__(self,
-                 use_example: bool, 
                  num_level: int,
                  num_example_sampling: int,
                  sample_interval: int,
@@ -25,8 +24,7 @@ class ExamplarManager:
                  src_path: str,
                  criteria: List[str])->None:
         super().__init__()        
-        
-        self.use_example = use_example
+
         self.num_level = num_level
         self.num_example_sampling = num_example_sampling
         self.sample_interval = sample_interval
