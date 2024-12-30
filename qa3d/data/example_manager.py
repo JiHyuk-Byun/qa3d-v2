@@ -41,7 +41,6 @@ class ExamplarManager:
     
     # In descending order
     def _sort_by_criterion(self, criterion: str)->List[Examplar]:
-        
         sorted_examplars = sorted(self.examplars, key=lambda x: -x.score[criterion])
         
         return sorted_examplars
@@ -93,13 +92,10 @@ class ExamplarManager:
         for criterion, criterion_indices in zip(self.criteria, batch_indices):
 
             sorted_examplars = np.array(self._sort_by_criterion(criterion))
-            
             criterion_samples = sorted_examplars[criterion_indices] # [n_level, n_sampling, n_batch]
-            
             sample[criterion] = criterion_samples
         
         batch_sample = []
-        
         # Reformatting to batch->n_sampling->criteria->n_level
         for batch_idx in range(n_batch):
             examplar_lst = []

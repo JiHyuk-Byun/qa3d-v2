@@ -40,19 +40,17 @@ class PromptBuilder:
         prompts = {}
         
         for (criterion, input_type), instruction in zip(self.input_types.items(), self.criteria_instructions):
-            
             input_text = self.main_structure
             # insert input types
             input_text = input_text.replace('<|input_types|>', ' and '.join(input_type))
-            
             # insert instructions
             input_text = input_text.replace('<|instruction|>', instruction)
             
             if self.show_prompt:
                 print(f'Criterion: {criterion}\nPrompt:\n{input_text}')
+            
             text_prompt = [{'type': 'text',
                             'text': input_text}]
-        
             prompts[criterion] = text_prompt
         
         return prompts

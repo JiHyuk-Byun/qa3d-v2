@@ -24,12 +24,10 @@ class OpenaiApiModel(BaseModel):
         
         return client
     
-    # for 1 question in iter * batch
-    def question_and_answer(self, questions):
-        '''
-        Returns List of Response. Each Response has n_choices answers from equal examplar set.
-        '''
-        tgt_gids, criteria, questions = self._make_llm_input(questions)
+    # for 1 question in iter * batch    
+    def forward_vlm(self, batch_inputs):
+
+        tgt_gids, criteria, questions = self.make_vlm_input(questions)
         answers = []
         gid_previous = ''
         
@@ -66,20 +64,17 @@ class OpenaiApiModel(BaseModel):
                             'error': err})
             
             gid_previous = gid
-        return answers
-    
-    def _make_llm_input(self, inputs): # List of content
-        contents = []
-        gids = []
-        criteria = []
-        for input_set in inputs:
-            contents.append(input_set.prompt)
-            gids.append(input_set.gid)
-            criteria.append(input_set.criterion)
             
-        return gids, criteria, contents
+        return answers        
+    
+    # def _make_vlm_input(self, inputs): # List of content
+    #     contents = []
+    #     gids = []
+    #     criteria = []
+    #     for input_set in inputs:
+    #         contents.append(input_set.prompt)
+    #         gids.append(input_set.gid)
+    #         criteria.append(input_set.criterion)
+            
+    #     return gids, criteria, contents
 
-    # # ToDo1: response로부터 output 빼기
-    # for i in range(n_choices):
-    #                 answer = response.choices[i].message.content
-    # # ToDo2: batch inference 반영

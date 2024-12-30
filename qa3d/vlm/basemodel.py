@@ -1,33 +1,12 @@
 import os
 from os import path as osp
+from abc import abstractmethod, ABC
 
 import jsonlines
 
 from typing import List
-
-
-# class Response:
-#     def __init__(self, response: list, err: str):
-#         super().__init__()
         
-#         self.response = response # list of answers
-#         self.error = err
-        
-#     def __repr__(self):
-#         response = ""
-#         if self.response == None:
-#             return f"{self.error}"
-        
-#         else:
-#             for idx, resp in enumerate(self.response):
-
-#                 response += f"\nResponse {idx}: "
-#                 response += f"\n{resp}"
-                
-#             return response
-        
-class BaseModel:
-    
+class BaseVLM(ABC):
     def __init__(self, model_name:    str,
                  temperature:   float,
                  max_tokens: int,
@@ -45,10 +24,26 @@ class BaseModel:
         self.sampling_params = None
         self.api_key = api_key
     
-    def question_and_answer(self, model_name, question: List[str], input_images):
-        pass
+    def run(self, batch_inputs):
+        batch_vlm_input = self.make_vlm_input(batch_inputs)
+        
+        batch_output = forward_vlm(batch_vlm_input)
+
+        return batch_output
     
-    def _make_llm_input(self, input):
+    def make_vlm_input(self, batch_inputs):
+        contents = []
+        gids = []
+        criteria = []
+        for input_set in batch_inputs:
+            contents.append(input_set.prompt)
+            gids.append(input_set.gid)
+            criteria.append(input_set.criterion)
+            
+        return gids, criteria, contents
+        
+    @abstractmethod
+    def forward_vlm(self, batch_inputs):
         pass
     
     # Create open-ai batch file format

@@ -8,7 +8,7 @@ from argparse import ArgumentParser
 from omegaconf import OmegaConf
 from tqdm import tqdm
 
-from qa3d.vlm import VLMLoader
+from qa3d.vlm import load_vlm
 from qa3d.data import DataManager, Asset, Examplar
 from qa3d.stat import StatPilot
 from qa3d.prompt import PromptBuilder
@@ -18,7 +18,7 @@ parser = ArgumentParser()
 parser.add_argument('--config', '-c', type=str, default='config/main_gpt4o.yaml')
 parser.add_argument('--show_prompt', '-p', type=bool, default=False)
 
-args = parser.parse_args()
+args = parser.parse_args() 
 
 def main():
     cfg = OmegaConf.load(args.config)
@@ -35,12 +35,11 @@ def main():
     print("="*46)
     
     #2. Load VLM
-    vlm_loader = VLMLoader(**cfg.model)
     print("\nLoading VLM...")
-    vlm_loader.load_vlm()
-    model = vlm_loader.model
+    model = load_vlm(**cfg.model)
     print(vlm_loader)
     print("="*46)
+    
     #3. load examplar and build Data Manager
     print("\nLoading data and prompts...")
     data_manager = DataManager(**cfg.data, criteria=list(cfg.prompt.input_types.keys()))

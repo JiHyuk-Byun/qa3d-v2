@@ -52,7 +52,6 @@ class DataManager:
     def register_gids_to_process(self, split_path, processed_gids: List[str]):
         
         split_gids = open(split_path, 'r').read().strip().split('\n') # strip and readlines
-        
         self.data_lst = [gid for gid in split_gids if gid not in processed_gids]
         
         return self.data_lst
@@ -64,7 +63,6 @@ class DataManager:
         batch_sample = self.example_manager.batch_sample(len(batch))
         
         pair_lst = []
-        
         for asset, samples in zip(batch, batch_sample):
             for sample in samples:
                 pair_lst.append((asset,sample))
