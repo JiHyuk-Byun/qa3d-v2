@@ -82,7 +82,7 @@ class PromptBuilder:
                 
             # Insert target asset
             asset_caption = [{'type': 'text',
-                              'text': '# Target object: '}]
+                              'text': '# Target object:\n'}]
             asset_img_prompt, asset_img = self._get_image_prompt(asset=asset, criterion=criterion)
             
             criterion_prompt.extend([*asset_caption, *asset_img_prompt])
@@ -118,7 +118,7 @@ class PromptBuilder:
             
             input_imgs.append(image)
             input_prompt.extend(image_prompt)
-            
+
         return input_prompt, input_imgs
     
     def _encode_image(self, image_path):

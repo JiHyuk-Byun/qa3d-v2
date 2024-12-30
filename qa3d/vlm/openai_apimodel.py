@@ -17,7 +17,7 @@ class OpenaiApiModel(BaseVLM):
                          n_choices=n_choices,
                          api_key = api_key)        
         
-        self.client = self._initilize(api_key)
+        self.client = self._initialize(api_key)
         
     def _initialize(self, api_key):
 
