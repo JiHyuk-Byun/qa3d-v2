@@ -59,7 +59,7 @@ class OpenaiApiModel(BaseModel):
             
             except Exception as e:
                 err = e
-                response = [e]
+                response = [str(e)]
                 
             print("response:", response)
             
