@@ -6,14 +6,13 @@ from typing import List
 import glob
 import requests
 
-THRESHOLD = 60*60*3
-
 class StatPilot:
-    def __init__(self, src_path: str, out_dir: str):
+    def __init__(self, src_path: str, out_dir: str, time_threshold: int):
         super().__init__()
         
         self.src_path = src_path
         self.out_dir = out_dir
+        self.time_threshold = time_threshold
         
         self.ip, self.gpu_id, self.pid = self._get_local_info()
         self.start_time = f'{int(time.time())}'
@@ -46,7 +45,7 @@ class StatPilot:
             elif status == "processing":
                 stuck_time = int(self.start_time) - int(time)
 
-                if  stuck_time < THRESHOLD: # Processing...
+                if  stuck_time < self.time_threshold: # Processing...
                     continue
                 else:
                     print(f'[IP: {ip}, gpu_id: {gpu_id}, pid: {pid}] is stuck for {stuck_time/3600:.2f} hours.')
@@ -101,8 +100,8 @@ class StatPilot:
         with open(path_processing, 'w') as f:
             info = [self.ip, self.gpu_id, self.pid, self.start_time]
             f.write("\n".join(info))
-        []
-        self.write_processed_gids([""])
+        
+        self.write_processed_gids([""]) # for purpose of making split txt file.
             
             
     def mark_finished(self):
@@ -113,19 +112,25 @@ class StatPilot:
     
     def write_processed_gids(self, batch: List[str]):
         
+        processed_gids = []
+        # If already exist, maybe it was processing, which means this function is in the purpose of not initilizing split file.
+        if osp.exists(self.split_path):
+            processed_gids = self.get_processed_gids(self.split)
+        
+        processed_gids.extend(batch)
+        
         with open(self.split_path, 'w') as f:
-            gids = '\n'.join(batch)
+            gids = '\n'.join(processed_gids)
             f.write(gids)
             
-    def get_processed_gids(self, split_idx):
+    def get_processed_gids(self, split_idx)->List[str]:
         
         split_path = osp.join(self.splits_dir, f'{split_idx}.txt')
-        with open(split_path, 'r') as f:
-            
+        with open(split_path, 'r') as f:    
             processed_gids = f.read()
+            
             if len(processed_gids) == 0:
                 return []
-            
             else:
                 processed_gids = processed_gids.strip().split('\n')
             

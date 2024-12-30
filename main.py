@@ -37,7 +37,6 @@ def main():
     #2. Load VLM
     print("\nLoading VLM...")
     model = load_vlm(**cfg.model)
-    print(vlm_loader)
     print("="*46)
     
     #3. load examplar and build Data Manager
@@ -68,6 +67,7 @@ def main():
         batch_inputset = []
         for asset, criterion_examplar in paired_batch:
             input_set = prompt_builder.insert_images_to_prompt(asset, criterion_examplar) # List of InputSet
+
             batch_inputset.extend(input_set) # List of InputSet, n_sampling * criteria * batch size
         
         #6-3. batch inference.

@@ -1,7 +1,5 @@
 from typing import List
 
-from ..data import Asset
-
 class InputSet:
     '''
     gid directory 안에 criterion 폴더 6개 만들고, 그 안에 examplar_gid set * sampling 횟수
@@ -13,4 +11,5 @@ class InputSet:
         self.prompt = prompt
         self.asset_image = asset_image
         self.examplar_gids = examplar_gids
+    
     

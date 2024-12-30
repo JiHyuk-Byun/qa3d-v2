@@ -26,8 +26,8 @@ data:
 
 prompt:
   template_dir: assets/prompt_templates
-  prompt_type: scoring
   use_example: True
+  prompt_type: scoring
   input_types:
     geometry: ['rgb', 'normal_map']
     texture: ['rgb', 'albedo']
@@ -39,3 +39,4 @@ prompt:
 stat:
   src_path: datasets/splits_test/
   out_dir: outputs/stat/
+  time_threshold: 10800

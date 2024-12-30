@@ -3,12 +3,11 @@ from os import path as osp
 from abc import abstractmethod, ABC
 
 import jsonlines
-
 from typing import List
         
 class BaseVLM(ABC):
-    def __init__(self, model_name:    str,
-                 temperature:   float,
+    def __init__(self, model_name: str,
+                 temperature: float,
                  max_tokens: int,
                  n_choices: int,
                  api_key: str=None,)->None:
@@ -24,26 +23,28 @@ class BaseVLM(ABC):
         self.sampling_params = None
         self.api_key = api_key
     
-    def run(self, batch_inputs):
-        batch_vlm_input = self.make_vlm_input(batch_inputs)
-        
-        batch_output = forward_vlm(batch_vlm_input)
+    def run(self, batch_inputset):
+        tgt_gids, criteria, batch_vlm_message = self.make_vlm_input(batch_inputset)
+        batch_output = self.forward_vlm(tgt_gids, criteria, batch_vlm_message)
 
         return batch_output
-    
-    def make_vlm_input(self, batch_inputs):
-        contents = []
+
+    def make_vlm_input(self, batch_inputset):
+        messages = []
         gids = []
         criteria = []
-        for input_set in batch_inputs:
-            contents.append(input_set.prompt)
+        
+        for input_set in batch_inputset:
+
+            messages.append([{"role": "user",
+                              "content": input_set.prompt}])
             gids.append(input_set.gid)
             criteria.append(input_set.criterion)
             
-        return gids, criteria, contents
+        return gids, criteria, messages
         
     @abstractmethod
-    def forward_vlm(self, batch_inputs):
+    def forward_vlm(self, tgt_gids, criteria, batch_inputs):
         pass
     
     # Create open-ai batch file format
