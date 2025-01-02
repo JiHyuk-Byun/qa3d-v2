@@ -1,0 +1,69 @@
+{
+    "asset_gid": "86/442613",
+    "geometry": {
+        "0-answer-0": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "0-answer-1": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "0-answer-2": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "1-answer-0": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "1-answer-1": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "1-answer-2": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "2-answer-0": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "2-answer-1": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "2-answer-2": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}"
+    },
+    "texture": {
+        "0-answer-0": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "0-answer-1": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "0-answer-2": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "1-answer-0": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "1-answer-1": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "1-answer-2": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "2-answer-0": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "2-answer-1": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "2-answer-2": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}"
+    },
+    "material": {
+        "0-answer-0": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "0-answer-1": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "0-answer-2": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "1-answer-0": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "1-answer-1": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "1-answer-2": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "2-answer-0": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "2-answer-1": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "2-answer-2": "Error code: 400 - {'error': {'message': 'Too many images in request: 251, maximum allowed: 250.', 'type': 'invalid_request_error', 'param': None, 'code': None}}"
+    },
+    "plausibility": {
+        "0-answer-0": "Error code: 500 - {'error': {'message': 'An internal error occurred', 'type': 'server_error', 'param': None, 'code': None}}",
+        "0-answer-1": "Error code: 500 - {'error': {'message': 'An internal error occurred', 'type': 'server_error', 'param': None, 'code': None}}",
+        "0-answer-2": "Error code: 500 - {'error': {'message': 'An internal error occurred', 'type': 'server_error', 'param': None, 'code': None}}",
+        "1-answer-0": "Analysis: The object has a unique and fantastical design with consistent proportions and well-defined features. It adheres to its intended style and maintains a coherent structure across views.\n\nScore: 5",
+        "1-answer-1": "Analysis: The model exhibits a plausible and structured form, with accurate proportions and intricate details that enhance its 3D realism. The overall design closely resembles the intended object in a realistic manner.\n\nScore: 5",
+        "1-answer-2": "Analysis: The model has a fantastical appearance with exaggerated features and structure, which may not be entirely plausible compared to real-world objects. While it is visually coherent, it does not represent a realistic object but rather a stylized or fictional character.\n\nScore: 3",
+        "2-answer-0": "Analysis: The model shows good 3D plausibility, with clear structure and proportions. The shapes and details are distinct and resemble the intended style effectively.\n\nScore: 4",
+        "2-answer-1": "Analysis: The model has a fantastical design with intricate details, which adds to its vibrant and imaginative appearance. While it\u2019s not representative of a real-world object, its proportions and structure are consistent, showing a coherent 3D form.\n\nScore: 4",
+        "2-answer-2": "Analysis: The given model displays plausible 3D characteristics with accurate proportions and details, resembling a real-world object effectively. The shape, structure, and overall appearance contribute to the impression of authenticity.\n\nScore: 5"
+    },
+    "artifacts": {
+        "0-answer-0": "Error code: 500 - {'error': {'message': 'An internal error occurred', 'type': 'server_error', 'param': None, 'code': None}}",
+        "0-answer-1": "Error code: 500 - {'error': {'message': 'An internal error occurred', 'type': 'server_error', 'param': None, 'code': None}}",
+        "0-answer-2": "Error code: 500 - {'error': {'message': 'An internal error occurred', 'type': 'server_error', 'param': None, 'code': None}}",
+        "1-answer-0": "Error code: 500 - {'error': {'message': 'An internal error occurred', 'type': 'server_error', 'param': None, 'code': None}}",
+        "1-answer-1": "Error code: 500 - {'error': {'message': 'An internal error occurred', 'type': 'server_error', 'param': None, 'code': None}}",
+        "1-answer-2": "Error code: 500 - {'error': {'message': 'An internal error occurred', 'type': 'server_error', 'param': None, 'code': None}}",
+        "2-answer-0": "Error code: 500 - {'error': {'message': 'An internal error occurred', 'type': 'server_error', 'param': None, 'code': None}}",
+        "2-answer-1": "Error code: 500 - {'error': {'message': 'An internal error occurred', 'type': 'server_error', 'param': None, 'code': None}}",
+        "2-answer-2": "Error code: 500 - {'error': {'message': 'An internal error occurred', 'type': 'server_error', 'param': None, 'code': None}}"
+    },
+    "preference": {
+        "0-answer-0": "Error code: 500 - {'error': {'message': 'An internal error occurred', 'type': 'server_error', 'param': None, 'code': None}}",
+        "0-answer-1": "Error code: 500 - {'error': {'message': 'An internal error occurred', 'type': 'server_error', 'param': None, 'code': None}}",
+        "0-answer-2": "Error code: 500 - {'error': {'message': 'An internal error occurred', 'type': 'server_error', 'param': None, 'code': None}}",
+        "1-answer-0": "Error code: 500 - {'error': {'message': 'An internal error occurred', 'type': 'server_error', 'param': None, 'code': None}}",
+        "1-answer-1": "Error code: 500 - {'error': {'message': 'An internal error occurred', 'type': 'server_error', 'param': None, 'code': None}}",
+        "1-answer-2": "Error code: 500 - {'error': {'message': 'An internal error occurred', 'type': 'server_error', 'param': None, 'code': None}}",
+        "2-answer-0": "Error code: 500 - {'error': {'message': 'An internal error occurred', 'type': 'server_error', 'param': None, 'code': None}}",
+        "2-answer-1": "Error code: 500 - {'error': {'message': 'An internal error occurred', 'type': 'server_error', 'param': None, 'code': None}}",
+        "2-answer-2": "Error code: 500 - {'error': {'message': 'An internal error occurred', 'type': 'server_error', 'param': None, 'code': None}}"
+    }
+}
