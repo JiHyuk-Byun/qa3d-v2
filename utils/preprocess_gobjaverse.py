@@ -2,12 +2,14 @@ import os
 from os import path as osp
 import json
 
+from tqdm import tqdm
 from PIL import Image
 import cv2
 import numpy as np
 import glob
 from argparse import ArgumentParser
 
+TARGET_RENDERS = ['rgb', 'albedo', 'normal_map', 'metallic_map', 'roughness_map']
 TARGET_VIEW_IDX = [0, 6, 12, 18]
 os.environ["OPENCV_IO_ENABLE_OPENEXR"]="1"
 
@@ -15,9 +17,9 @@ os.environ["OPENCV_IO_ENABLE_OPENEXR"]="1"
 #                    52: [0, 9, 18, 27]}              #round_view = 36
 
 parser = ArgumentParser()
-parser.add_argument('--src_dir', '-d', type=str, default='datasets/gobjaverse_280k_test')
+parser.add_argument('--src_dir', '-s', type=str, default='datasets/gobjaverse_280k_test')
 #parser.add_argument('--sample_view', '-v', type=int, default=4)
-parser.add_argument('--gids_lst', '-g', type=str, default='datasets/gobjaverse_280k_test.json')#'assets/example.json')
+#parser.add_argument('--gids_lst', '-g', type=str, default='datasets/gobjaverse_280k_test.json')#'assets/example.json')
 
 args = parser.parse_args()
 
@@ -61,13 +63,18 @@ def create_square_images(img_lst, ncols):
 def main():
     
     src_dir = args.src_dir
-    gids_lst = sorted(json.load(open(args.gids_lst, 'r')), key=lambda x: int(x.split('/')[-2] + x.split('/')[-1]))
+    gids_lst = glob.glob(osp.join(src_dir, "*", "*/"))
+    gids_lst = sorted(gids_lst, key=lambda x: int(x.split('/')[-3] + x.split('/')[-2]))
+    
     #print(gids_lst)
     print("Number of Assets: ", len(gids_lst))
-    for gid in gids_lst:
-        
+    cnt = 0
+    for gid in tqdm(gids_lst):
+        # if all(osp.exists(osp.join(gid, render_type)+'.png') for render_type in TARGET_RENDERS):
+        #     continue
+
         ## Sample images
-        gid_path = osp.join(src_dir, gid)
+        gid_path = gid
         all_view = glob.glob(osp.join(gid_path, "*/"))
         n_view = len(all_view)
         all_view = sorted(all_view, key = lambda x: int(x.split('/')[-2]))
@@ -79,10 +86,9 @@ def main():
         normal_lst = []
         mr_lst = []
         
+        # per image_view point
         for sample in sampled_view:
-
             name = sample.split('/')[-2]
- 
 
             _rgb = cv2.imread(osp.join(sample, name) + '.png', cv2.IMREAD_UNCHANGED)
             _albedo = cv2.imread(osp.join(sample, name) + '_albedo.png', cv2.IMREAD_UNCHANGED)
@@ -100,7 +106,6 @@ def main():
         cv2.imwrite(osp.join(gid_path, 'albedo.png'), create_square_images(albedo_lst, 2))
         cv2.imwrite(osp.join(gid_path, 'normal_map.png'), create_square_images(normal_lst, 2))
         cv2.imwrite(osp.join(gid_path, 'mr.png'), create_square_images(mr_lst, 2))
-
         
         ## Color bg and split mr
         rgba = Image.open(osp.join(gid_path, 'rgb.png')).convert('RGBA')
@@ -125,6 +130,8 @@ def main():
         metallic.save(osp.join(gid_path, 'metallic_map.png'))
         roughness.save(osp.join(gid_path, 'roughness_map.png'))
         
+        cnt += 1
+    print(f"{cnt} assets are newly preprocessed among {len(gids_lst)} assets.")
     print('Complete!!')
 
 if __name__ == '__main__':

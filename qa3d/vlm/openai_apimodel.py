@@ -1,5 +1,6 @@
 import os
 import base64
+import time
 
 from openai import OpenAI
 
@@ -37,6 +38,7 @@ class OpenaiApiModel(BaseVLM):
             print(f"\ncriteria: {criterion}")
             
             try:
+                time.sleep(1)
                 answer = self.client.chat.completions.create(
                     model=self.model_name,
                     messages=message,

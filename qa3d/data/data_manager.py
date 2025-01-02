@@ -9,7 +9,6 @@ from .asset import Asset
 
 class DataManager:
     def __init__(self, src_path: str,
-                 meta_path: str,
                  criteria: List[str],
                  n_batch: int,
                  n_workers: int,
@@ -18,7 +17,6 @@ class DataManager:
                  example: dict=None):
         super().__init__()
         self.src_path = src_path
-        self.meta_path = meta_path
         
         self.n_batch = n_batch
         self.n_workers = n_workers

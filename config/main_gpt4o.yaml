@@ -7,12 +7,11 @@ model:
   n_choices: 3
 
 experiment:
-  out_dir: outputs/
+  out_dir: outputs/2025-01-02/ordering
   batch_inference: True
 
 data:
   src_path: datasets/gobjaverse_280k_test/
-  meta_path: datasets/gobjaverse_280k_test.json
   example:
     num_level: 5 
     num_example_sampling: 3
@@ -27,16 +26,15 @@ data:
 prompt:
   template_dir: assets/prompt_templates
   use_example: True
-  prompt_type: scoring
+  prompt_type: ordering
   input_types:
     geometry: ['rgb', 'normal_map']
-    texture: ['rgb', 'albedo']
+    texture: ['rgb', 'albedo'] 
     material: ['rgb', 'metallic_map', 'roughness_map']
     plausibility: ['rgb']
     artifacts: ['rgb']
     preference: ['rgb']
 
 stat:
-  src_path: datasets/splits_test/
-  out_dir: outputs/stat/
+  src_path: datasets/splits_test2/
   time_threshold: 10800

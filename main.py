@@ -26,7 +26,8 @@ def main():
     os.makedirs(save_dir, exist_ok=True)
     
     #1. Read target data split for current processing gpu
-    stat_pilot = StatPilot(**cfg.stat)
+    stat_dir = osp.join(cfg.experiment.out_dir, "stat")
+    stat_pilot = StatPilot(**cfg.stat, out_dir=stat_dir)
     split_idx, split_path = stat_pilot.find_unmarked_split()
     stat_pilot.mark_processing()
     
@@ -76,12 +77,12 @@ def main():
         
         #6-4. Save answers. for each gid, n_choices*num_example_sampling answers
         print(f'[batch {batch_idx+1}/{n_iterations}] outputs: {len(batch_answers)},'
-              f' time: {end_time - start_time:.2f} s')
+             f' time: {end_time - start_time:.2f} s')
         
         save_answers(save_dir, batch_inputset, batch_answers)
 
         stat_pilot.write_processed_gids([asset.gid for asset in batch])
-        
+        time.sleep(5)
     stat_pilot.mark_finished()
 
 if __name__ == '__main__':

@@ -67,7 +67,7 @@ class PromptBuilder:
         for criterion, examplars in criterion_examplar.items():
             input_images = []
             examplar_gids = []
-            criterion_prompt = self.prompt[criterion]
+            criterion_prompt = self.prompt[criterion].copy() # must be not modified
             
             # Insert examplar
             # lower level, higher score.
@@ -89,6 +89,7 @@ class PromptBuilder:
             input_images.extend(asset_img)
 
             input_set = InputSet(criterion, asset.gid, criterion_prompt, asset.image, examplar_gids)
+            #input_set.print_prompt()
             inputs.append(input_set)
             
         return inputs

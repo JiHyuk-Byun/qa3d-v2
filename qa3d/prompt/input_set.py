@@ -12,4 +12,6 @@ class InputSet:
         self.asset_image = asset_image
         self.examplar_gids = examplar_gids
     
-    
+    def print_prompt(self):
+        print(self.gid,'\n')
+        print(self.prompt)

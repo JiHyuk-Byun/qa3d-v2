@@ -12,7 +12,6 @@ experiment:
 
 data:
   src_path: assets/gobajverse_280k
-  meta_path: assets/gobjaverse_280k.json
   example:
     use_example: True
     num_level: 5 
