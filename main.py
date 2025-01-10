@@ -33,6 +33,7 @@ def main():
     
     processed_gids: List[str] = stat_pilot.get_processed_gids(split_idx)
     print(f"Assigned split: {split_idx}\nNumber of processed gids: {len(processed_gids)}")
+    print(f"Output path: {save_dir}")
     print("="*46)
     
     #2. Load VLM
@@ -54,10 +55,11 @@ def main():
     
     dataloader = data_manager.load_dataloader()
     n_iterations = len(dataloader)
-    start_time = time.time()
+
     
     #6. batch QA
     for batch_idx, batch in enumerate(dataloader): # batch: batch of Assets
+        start_time = time.time()
         for asset in batch:
             asset.load_image_data()
         

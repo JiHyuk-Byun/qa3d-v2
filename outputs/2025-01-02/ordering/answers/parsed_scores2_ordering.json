@@ -1,0 +1,1276 @@
+[
+    {
+        "metadata": {
+            "gobjaverse_index": "0/12095",
+            "objaverse_index": "000-000/4641830300d843329d1c7b8260364173.glb"
+        },
+        "geometry": {
+            "analysis": [
+                "The target image is a simplistic cube shape, as evidenced by its normal map indicating flat surfaces with no intricate details. Compared to the examples, it lacks the detailed geometry seen in Images 0 through 4, which depict more complex forms and features. Therefore, its index is 5.\n\nIndex: 5",
+                "The target image displays a primitive shape with minimal geometry detail, primarily evidenced by the flat surfaces and simplistic normal map. Compared to the example images, it lacks the fine details and complexity illustrated in even the lower-ranked examples. Therefore, its index is 5.\n\nIndex: 5",
+                "The target object is a simple square shape with a primitive normal map, similar to Image 4 in terms of geometric complexity. It lacks intricate details compared to the higher-ranked models. Therefore, it should be ranked at the end of the list.\n\nIndex: 5"
+            ],
+            "score": [
+                5.0,
+                5.0,
+                5.0
+            ],
+            "mean_score": 5.0,
+            "median_score": 5.0
+        },
+        "texture": {
+            "analysis": [
+                "The target image features a simple texture pattern with limited color variation and detail, similar to Image 4, which lacks detailed texture. However, it exhibits more defined edges and a recognizable pattern, unlike Image 4's solid color. This places it between Image 3, which shows more complex textures and color variations, and Image 4.\n\nIndex: 4",
+                "The target image has clear and distinct patterns, but lacks the high-frequency texture details or complex color variations found in more realistic and high-fidelity textures. It is similar in simplicity to Image 3 (the ribcage), which also lacks intricate textures. However, unlike Image 3, which has subtle shading variations, the target image has bold, repetitive patterns without much variation. Therefore, the target image is better than Image 4 (the boat) due to its patterned texture but is not as detailed as Image 3, which shows finer details.\n\nIndex: 4"
+            ],
+            "score": [
+                4.333333333333333,
+                4.0
+            ],
+            "mean_score": 4.166666666666666,
+            "median_score": 4.166666666666666
+        },
+        "material": {
+            "analysis": [
+                "The target image demonstrates minimal material variation as indicated by its metallic map, which contains no segmentation for metallic and non-metallic areas, and a roughness map that lacks fine-grained patterns or subtleties. When compared to the example images, the target's simplicity in material detail and absence of intricate surface irregularities place it lower on the quality scale. Therefore, its quality is lower than Image 4.\n\nIndex: 5",
+                "The target image has a metallic map that lacks detail, showing uniformity similar to Image 4. The roughness map is clean, without any clear variation or segmentation. It lacks the fine-grained patterns seen in higher-quality examples like Image 0 or Image 1. Therefore, the target image's material representation quality is worse than Image 4 because it does not capture subtle surface variations effectively.\n\nIndex: 5"
+            ],
+            "score": [
+                5.0,
+                5.0
+            ],
+            "mean_score": 5.0,
+            "median_score": 5.0
+        },
+        "plausibility": {
+            "analysis": [
+                "The target image shows a 3D model with simple geometric shapes and lacks intricate details, making it less plausible than the examples given. Its shape and design are less complex and realistic compared to the provided models. The simplistic and undecorated cube is less representative of a real-world object or scene, especially when compared to the detailed designs of the previous examples.\n\nIndex: 5",
+                "The target image shows a simple geometric pattern with distinct colors but lacks the complexity and plausibility of real-world objects. It is less realistic and detailed compared to Example Image 3, which depicts a more complex model. Therefore, the target object is better than Image 4 but worse than Image 3 in terms of plausibility.\n\nIndex: 4",
+                "The target image appears to be a simple cube with a basic pattern and lacks realistic details compared to the example models. It does not match the level of detail and plausibility seen in the higher-ranked models like Image 0 or Image 1, which have more complex structures and realistic proportions. The target image is less detailed than the tree in Image 4 as well.\n\nIndex: 5"
+            ],
+            "score": [
+                4.666666666666667,
+                4.5,
+                4.666666666666667
+            ],
+            "mean_score": 4.611111111111112,
+            "median_score": 4.666666666666667
+        },
+        "artifacts": {
+            "analysis": [
+                "The target image exhibits a clean and artifact-free surface with simple geometry, suggesting a higher quality than Image 4, which displays disjointed and nonsensical geometry. However, it lacks the complexity and refinement seen in Image 3. Therefore, its index is 4.\n\nIndex: 4",
+                "The target image consists of a cube with consistent and clean textures, indicating a simplistic and low-poly design. Compared to Image 3, the cactus, which has a more realistic texture and complex geometry, the target model appears less detailed. However, it looks cleaner and more artifact-free than Image 4, the low-poly tree, which has visible polygonal structures and a less refined texture.\n\nIndex: 4"
+            ],
+            "score": [
+                4.0,
+                4.333333333333333
+            ],
+            "mean_score": 4.166666666666666,
+            "median_score": 4.166666666666666
+        },
+        "preference": {
+            "analysis": [
+                "The target image has simple geometry and texture, more polished than Image 4, which exhibits significant artifacts and less detailed geometry. However, compared with Image 3, the target image lacks detailed features and complexity. Therefore, the target image is better than Image 4 but worse than Image 3.\n\nIndex: 4",
+                "The target image has a clean, well-defined texture and good material quality with no visible artifacts. Its geometry is simple but plausible, which might place it around Image 3 or Image 4, as it lacks the detail of Image 2 but is better than Image 4. Due to its simplicity and clarity, it fits better than Image 4 but is not as complex as Image 3.\n\nIndex: 4"
+            ],
+            "score": [
+                4.0,
+                4.0
+            ],
+            "mean_score": 4.0,
+            "median_score": 4.0
+        }
+    },
+    {
+        "metadata": {
+            "gobjaverse_index": "10/64307",
+            "objaverse_index": "000-010/dcd8563eed2d42d09798991f93284809.glb"
+        },
+        "geometry": {
+            "analysis": [
+                "The target image demonstrates intricate geometric detailing with its complex curves and patterns, surpassing the level of detail seen in Image 1 (lamp) but not achieving the complexity and accuracy of the human figure in Image 0. Therefore, it should be placed between Image 0 and Image 1.\n\nIndex: 1",
+                "The target image exhibits intricate curves and complex shapes, evident in both the RGB and normal map images. These features demonstrate considerable geometric detail and precision, surpassing simplistic shapes like the obelisk or chair. While not as detailed as an animated character model, it showcases more complexity than the vending machine model. Therefore, its index is 1, as it fits between Image 0 and Image 1 in terms of detail and geometric quality.\n\nIndex: 1"
+            ],
+            "score": [
+                1.3333333333333333,
+                1.0
+            ],
+            "mean_score": 1.1666666666666665,
+            "median_score": 1.1666666666666665
+        },
+        "texture": {
+            "analysis": [
+                "The target image shows a high level of texture detail with distinct colors and patterns, making it superior to several examples. It stands out in terms of color diversity and fidelity compared to Image 2, which has relatively simple colors and textures. However, the target image does not surpass Image 1, which exhibits more realistic texture variations and color representation. Therefore, the target image fits best between Image 1 and Image 2.\n\nIndex: 2",
+                "The target image has a moderate level of texture detail with distinct color variations and clear edges in its design. Images 0 and 1 have high-fidelity textures and intricate detailing, while Image 4 displays a notably simple, low-detail texture. The target image falls between Image 2, which has some visible detailing, and Image 3, which has less texture variation but more than Image 4.\n\nIndex: 3",
+                "The target image exhibits a higher level of detail and varied colors compared to Image 4, which has a simple, monochromatic texture. However, it appears less detailed than Image 0, which features precise details and color variation. Therefore, the texture quality of the target image fits between Image 1 and Image 2, showing more detail than Image 2, but not as high fidelity as Image 1.\n\nIndex: 2"
+            ],
+            "score": [
+                2.0,
+                2.6666666666666665,
+                2.0
+            ],
+            "mean_score": 2.222222222222222,
+            "median_score": 2.0
+        },
+        "material": {
+            "analysis": [
+                "** The target image features a metallic map with well-defined non-metallic regions and the roughness map exhibits fine-grained patterns that enhance realism. Compared to the example images, the target object demonstrates material maps that have segmentation and detail, surpassing the simplistic maps of Image 2, which lacks detail and variation. However, it does not reach the granularity and realism observed in Image 1, which shows intricate patterning and segmentation in its maps, suggesting a higher realism.\n\n**Index:** 2"
+            ],
+            "score": [
+                3.5
+            ],
+            "mean_score": 3.5,
+            "median_score": 3.5
+        },
+        "plausibility": {
+            "analysis": [
+                "The target image consists of intricate, stylized elements that demonstrate a strong understanding of shape and design. However, it lacks real-world plausibility compared to more realistic models like Image 0 and Image 1. Yet, it exhibits more complexity and artistic detail than the simpler, less defined forms of Image 4.\n\nIndex: 4",
+                "The target image demonstrates a high level of artistic complexity and intricacy in its design, surpassing the simplicity of Image 4. However, it lacks some of the realistic proportions and structural details seen in Image 3, such as true-to-life materials and architectural elements. Therefore, its index is between Image 3 and Image 4.\n\nIndex: 4",
+                "The target image lacks the clear, real-world object resemblance seen in Image 0 and Image 1, which exhibit strong 3D plausibility and realistic proportions. The target features intricate, abstract shapes that do not closely imitate a recognizable object or scene, aligning it more closely to the more abstract presentations of Image 4.\n\nIndex: 5"
+            ],
+            "score": [
+                4.0,
+                3.0,
+                4.0
+            ],
+            "mean_score": 3.6666666666666665,
+            "median_score": 4.0
+        },
+        "artifacts": {
+            "analysis": [
+                "The target image appears to be artifact-free, with clean geometry and texture. It showcases intricate designs without visible noise, making it superior to the models in Images 3 and 4, which have simpler textures or slight artifacts. However, the target lacks the impeccable detail and complexity seen in Images 0 and 1. Therefore, it's better than Image 2 but not as refined as Image 1.\n\nIndex: 2"
+            ],
+            "score": [
+                3.0
+            ],
+            "mean_score": 3.0,
+            "median_score": 3.0
+        },
+        "preference": {
+            "analysis": [
+                "The target image shows a complex and well-executed design with intricate geometric details. The texture and material quality appear consistent and realistic. However, the overall form and artistry seem more stylized compared to Image 0, which has a more cohesive 3D plausibility. The target image is significantly better than Image 3, due to its superior material detail and artifact-free presentation. Therefore, it fits reasonably between Image 1 and Image 2.\n\nIndex: 2"
+            ],
+            "score": [
+                2.2
+            ],
+            "mean_score": 2.2,
+            "median_score": 2.2
+        }
+    },
+    {
+        "metadata": {
+            "gobjaverse_index": "15/86046",
+            "objaverse_index": "000-015/34cdad8cc6f54e15b8c42d1094085e3d.glb"
+        },
+        "geometry": {
+            "analysis": [],
+            "score": [],
+            "mean_score": null,
+            "median_score": null
+        },
+        "texture": {
+            "analysis": [
+                "The target image displays a high level of detail and accurate color representation, with intricate textures and fine details in both the RGB and albedo views. Compared to the example images, the target image has more texture fidelity than Images 3 and 4, which have simpler and less detailed textures. It is comparable to Image 2, as both have complex textures, but the target image possibly surpasses it in terms of color depth and variation. Therefore, the target image is better than Image 2 but not as high in fidelity as Image 1.\n\nIndex: 2",
+                "The target image exhibits high texture quality with detailed color representation and intricate design patterns similar to Example Image 1 (cake). The textures have a significant amount of detail, similar to Example Image 0 (character), surpassing images with simpler, less detailed color schemes. Therefore, its level of detail and color fidelity is better than Image 1 but slightly less than Image 0.\n\nIndex: 1"
+            ],
+            "score": [
+                2.5,
+                1.0
+            ],
+            "mean_score": 1.75,
+            "median_score": 1.75
+        },
+        "material": {
+            "analysis": [
+                "The target image has a consistent and undetailed metallic and roughness map, much like Image 4. There is little variation, indicating a lower quality in terms of material representation. The lack of segmentation in the metallic map and the uniformity in the roughness map suggest it does not capture the subtle surface variations that enhance realism.\n\nIndex: 5",
+                "** The target image shows a lack of segmentation and fine-grained patterns in both the metallic and roughness maps. The metallic map is entirely black, indicating no metallic regions, and the roughness map is very flat, which suggests a low level of detail. These characteristics place the target image below Image 4, which exhibits some variation and detail in the roughness map.\n\n**Index:** 5"
+            ],
+            "score": [
+                5.0,
+                5.0
+            ],
+            "mean_score": 5.0,
+            "median_score": 5.0
+        },
+        "plausibility": {
+            "analysis": [
+                "The target image exhibits a high level of detail and realism, with accurate proportions and complex features that enhance its 3D plausibility. It surpasses Images 0 (mushroom) and 1 (building), which have simpler shapes and textures. The intricate details and realistic design place it better than Image 1 but slightly less realistic than Image 2 (character model), which appears more stylized but rich in creativity.\n\nIndex: 2",
+                "The target image features a detailed and realistic model with accurate proportions and intricate details, which indicates high 3D plausibility. Compared to the examples, it surpasses the stylized and simplistic models like Image 2 (cartoon warrior), Image 3 (abstract chair), and Image 4 (blocky sheep) in terms of realism. However, it is comparable to Image 0 (angel sculpture) and might be slightly less realistic than Image 1 (stool) due to its distinctly stylized features.\n\nIndex: 2"
+            ],
+            "score": [
+                2.0,
+                2.0
+            ],
+            "mean_score": 2.0,
+            "median_score": 2.0
+        },
+        "artifacts": {
+            "analysis": [],
+            "score": [],
+            "mean_score": null,
+            "median_score": null
+        },
+        "preference": {
+            "analysis": [
+                "The target image shows superior geometry quality and detailed textures compared to Images 1 to 4. Its intricate design and material quality are more advanced, making it more plausible and artifact-free than these examples. However, it does not surpass the complexity and fine detailing of Image 0.\n\nIndex: 1",
+                "** The target image features a detailed and well-textured model with excellent geometry, distinctive textures, and material quality that enhances its 3D plausibility and artifact-free presentation. Compared to the example images, the target object demonstrates superior qualities to Images 2 and 3. However, it is slightly less refined than Image 1 in terms of texture quality and 3D plausibility.\n\n**Index:** 2"
+            ],
+            "score": [
+                1.0,
+                2.0
+            ],
+            "mean_score": 1.5,
+            "median_score": 1.5
+        }
+    },
+    {
+        "metadata": {
+            "gobjaverse_index": "15/89577",
+            "objaverse_index": "000-015/ea889becdb8c4d7b81bca93b488474de.glb"
+        },
+        "geometry": {
+            "analysis": [
+                "The target image showcases intricate details and complex geometry, particularly evident in the normal map. This is superior to the simplistic shapes of Image 4, such as the rectangular prism. Therefore, the target object ranks above Image 4. When compared to the more detailed models like Image 0 and Image 1, the target object demonstrates a similar level of fine detail and complexity. However, it does not surpass the highest quality captured in Image 0. Therefore, the target image is better than Image 1 but worse than Image 0.\n\nIndex: 1"
+            ],
+            "score": [
+                1.3333333333333333
+            ],
+            "mean_score": 1.3333333333333333,
+            "median_score": 1.3333333333333333
+        },
+        "texture": {
+            "analysis": [
+                "The target image has a predominantly single color with minimal texture detail, lacking high-frequency textures, making it appear flat and less detailed compared to Image 4, which also has limited detail but features distinct, albeit simple, textures and colors. Therefore, the target image falls below Image 4 in terms of texture quality.\n\nIndex: 5",
+                "The target image exhibits minimal texture detail and lacks color variation, as indicated by its uniform appearance in both RGB and albedo images. Compared to the example images, the target image appears to have less texture quality and detail. It is worse than Image 4, which at least displays some texture variation and distinction in colors.\n\nIndex: 5",
+                "The target image lacks detailed texture and color variation, similar to Image 4 which consists of a plain, single-tone appearance. The absence of high-frequency texture makes it less detailed compared to the other examples.\n\nIndex: 5"
+            ],
+            "score": [
+                5.0,
+                5.0,
+                5.0
+            ],
+            "mean_score": 5.0,
+            "median_score": 5.0
+        },
+        "material": {
+            "analysis": [
+                "** \n\nThe target object's metallic map is completely uniform, indicating no metal regions, and the roughness map shows no variation, representing a lack of detail. Compared to the example images:\n\n- **Image 0**: Shows more segmentation and variation in the roughness map, enhancing realism.\n- **Image 1**: Also contains more details in the roughness map.\n- **Image 2**: Lacks complexity in its maps, similar to the target object but still shows some variation.\n- **Image 3**: Roughness map has a bit more detail than Image 4 and the target object.\n- **Image 4**: Shows the least detail and complexity, similar to the target object, but still slightly better than uniformity.\n\nThe target object is worse than Image 4 as it provides no material details that enhance realism.\n\n**Index:** 5",
+                "The target image displays a metallic map that is uniformly non-metallic (black), similar to the majority of the examples. The roughness map is uniform and lacks detail, in line with Image 4, which appears simpler and lacks segmentation or fine-grained patterns. The multi-view presentation suggests minimal variation, leading to an absence of subtle realism.\n\n**Index**: 5"
+            ],
+            "score": [
+                4.0,
+                4.666666666666667
+            ],
+            "mean_score": 4.333333333333334,
+            "median_score": 4.333333333333334
+        },
+        "plausibility": {
+            "analysis": [
+                "The target image displays a highly detailed model with intricate shapes and realistic proportions, surpassing the simplicity and blockiness of Image 4. However, it may lack the precise realism and fine detailing present in Image 0. Therefore, its index is between Images 3 and 4, placing it at position 4, considering its plausibility and resemblance closely aligned with real-world objects.\n\nIndex: 4",
+                "The target image shows a well-detailed and complex design with intricate features. Compared to Image 4, the target model exhibits more realistic proportions and detail, indicating a higher level of 3D plausibility. While the geometry of Image 4 is more simplistic and abstract, the target image presents a more believable and sophisticated structure, surpassing it on the plausibility criterion. However, the target image lacks color and texture details seen in Images 0, 1, and 2, which affects its overall realism.\n\nIndex: 4"
+            ],
+            "score": [
+                4.0,
+                3.0
+            ],
+            "mean_score": 3.5,
+            "median_score": 3.5
+        },
+        "artifacts": {
+            "analysis": [],
+            "score": [],
+            "mean_score": null,
+            "median_score": null
+        },
+        "preference": {
+            "analysis": [
+                "The target image demonstrates high geometry quality with intricate details but lacks texture, which impacts texture and material quality. It is artifact-free with good 3D plausibility. Compared to the examples, it surpasses Image 4, which has many visual artifacts, and Image 3, which appears overly simple. It sits below the higher-ranked models that display detailed textures and materials. Therefore, the target image is better than Image 2 but worse than Image 1, mainly due to the absence of textures and materials.\n\nIndex: 3",
+                "The target image shows superior geometry quality and 3D plausibility compared to Image 4, with intricate details and a coherent structure. However, it lacks the detailed texturing and material quality seen in Image 0 and Image 1. Due to the lack of color and texture, it aligns closely with the simplicity of Image 3 but surpasses it in overall design complexity.\n\nIndex: 3"
+            ],
+            "score": [
+                3.6666666666666665,
+                3.0
+            ],
+            "mean_score": 3.333333333333333,
+            "median_score": 3.333333333333333
+        }
+    },
+    {
+        "metadata": {
+            "gobjaverse_index": "17/99302",
+            "objaverse_index": "000-017/db6c8aa5634c43dfa7b242a954cdee62.glb"
+        },
+        "geometry": {
+            "analysis": [
+                "The target image depicts simple geometric shapes with minimal details, as evidenced by the low-resolution facets visible in the normal map. Compared to the other objects, such as the motorcycle and the character, which demonstrate more intricate and complex geometry, the target object lacks the fine details required for a higher ranking. Therefore, the target image does not surpass any of the examples provided.\n\nIndex: 5",
+                "The target image is worse than Image 4 due to its overly simplistic geometry and lack of detailed normal mapping compared to all example images. The target appears to be a low-poly representation with minimal fine details.\n\nIndex: 5"
+            ],
+            "score": [
+                5.0,
+                5.0
+            ],
+            "mean_score": 5.0,
+            "median_score": 5.0
+        },
+        "texture": {
+            "analysis": [
+                "** The target image consists of simple, flat colors with minimal variations, lacking the detailed textures and high-frequency variations found in the example images. Compared to Image 4, which has some intricate details and variations, the target image's texture quality is much lower due to its plainness and absence of fine detail.\n\n**Index:** 5",
+                "The target image consists primarily of flat, low-detail textures with nearly uniform color, showing minimal variation and detail compared to all example images. Each example image has more diversity in color and texture detail. Therefore, the target image ranks lower in texture quality.\n\nIndex: 5",
+                "The target image lacks high-frequency texture and detailed color representation, exhibiting a simplistic appearance with minimal variation, similar to Image 4. It appears to have even less detail than Image 4, which has texture variance in parts of the model. Therefore, the target image is worse than Image 4 because it has less texture detail and variation.\n\nIndex: 5"
+            ],
+            "score": [
+                5.0,
+                5.0,
+                5.0
+            ],
+            "mean_score": 5.0,
+            "median_score": 5.0
+        },
+        "material": {
+            "analysis": [
+                "** The target object has a metallic map showing non-metallic surfaces and a roughness map with minimal detail, similar to very basic models. \n\nWhen compared with the examples, Image 4 demonstrates more roughness and segmentation. The rock-like surfaces of the target fail to capture any fine-grained variation or segmentation, appearing uniformly textured. The roughness map of the target lacks the subtle variations that enhance realism seen in better models.\n\n**Index:** 5",
+                "The target object's metallic map is entirely black, indicating a lack of metallic detail, and the roughness map is also a single color with no variation, showing no granular surface variations. This lack of detail suggests a low material quality compared to the examples. Each of the example objects, even those lower in the ranking, exhibit more segmentation or granularity in their metallic and roughness maps than the target object. Therefore, the given object is worse than Image 4 because it does not capture any material detail or realism.\n\nIndex: 5"
+            ],
+            "score": [
+                4.75,
+                5.0
+            ],
+            "mean_score": 4.875,
+            "median_score": 4.875
+        },
+        "plausibility": {
+            "analysis": [
+                "The target image has a low level of detail and is less realistic compared to Images 0 through 3. It lacks clear structure and detail, resembling a simplified or abstract representation. Image 4, although minimally detailed, has a clear shape with distinguishable features. The target image\u2019s simplistic form and lack of realistic detail place it below Image 4.\n\nIndex: 5",
+                "The target image represents a simple, low-poly model of rocks with limited detail. It lacks the complexity and realism of Image 0 (the lamp) and Image 1 (the ornate disc). The shapes are basic and do not capture the intricate textures or proportions seen in higher-ranked models. It is less realistic and detailed compared to all example images, including Image 4 (the flower). Therefore, its quality is below all provided examples.\n\nIndex: 5",
+                "The target image appears to be less detailed and realistic compared to the examples provided. Its low-polygon count and lack of detail make it less plausible as a real-world object. It is less sophisticated in shape and texture compared to the example images, particularly Image 4, which displays more complex structures and detail.\n\nIndex: 5"
+            ],
+            "score": [
+                5.0,
+                5.0,
+                5.0
+            ],
+            "mean_score": 5.0,
+            "median_score": 5.0
+        },
+        "artifacts": {
+            "analysis": [
+                "The target image displays low-poly structures with noticeable lack of detail, making it less artifact-free compared to the examples, particularly in geometry quality. It compares unfavorably to all example images, as those exhibit more refined geometry and texture detail with fewer artifacts.\n\nIndex: 5"
+            ],
+            "score": [
+                5.0
+            ],
+            "mean_score": 5.0,
+            "median_score": 5.0
+        },
+        "preference": {
+            "analysis": [
+                "The target image is abstract with simple geometry and minimal textures. It appears to have less detail and realism compared to all example images, which have more defined shapes and textures. Particularly, the target shows less plausibility and texture quality relative to Image 4, the voxel-style sheep, which has a clearer voxel aesthetic.\n\nIndex: 5",
+                "The target image has low geometry complexity, minimal texture detail, and lacks material richness, making it seem less plausible and more artifact-prone compared to the example images. Image 4, though simple, maintains a more polished texture and form.\n\nIndex: 5"
+            ],
+            "score": [
+                4.8,
+                5.0
+            ],
+            "mean_score": 4.9,
+            "median_score": 4.9
+        }
+    },
+    {
+        "metadata": {
+            "gobjaverse_index": "19/106378",
+            "objaverse_index": "000-019/4546deb5c3234af9941f18119e8fe746.glb"
+        },
+        "geometry": {
+            "analysis": [
+                "The target image shows a 3D model with significant visual artifacts and incomplete geometry, as evident in the normal map. The shape lacks detailed definition and is less refined compared to all provided example images. It's particularly lacking when compared with Image 4, which, despite being basic in form, maintains a clear and coherent structure.\n\nIndex: 5",
+                "The target image displays a model that lacks fine geometric details and accuracy in the normal map, similar to simplistic representations with missing elements. It shows lower complexity compared to Image 4, which includes notable detail and enhanced geometry.\n\nIndex: 5",
+                "The target image displays poor geometry quality due to the incomplete and fragmented shape that lacks the fine details seen in the other examples. The normal map also shows inconsistencies, failing to accurately represent the intended shape. Consequently, the given object is worse than Image 4 because it lacks coherent structural integrity and detail.\n\nIndex: 5"
+            ],
+            "score": [
+                5.0,
+                4.333333333333333,
+                5.0
+            ],
+            "mean_score": 4.777777777777778,
+            "median_score": 5.0
+        },
+        "texture": {
+            "analysis": [
+                "The target image appears to have a high level of detail in color with visible texture patterns, especially in the pumpkin\u2019s surface. Compared to the examples, it seems to fall between Images 0 and 1. Image 0 showcases a vibrant color and structured design but less intricate detail compared to the target. Image 1, although having a consistent texture, lacks the complexity seen in the target\u2019s surface.\n\nIndex: 1",
+                "The target image shows a multicolored mushroom with moderate texture detail. Compared to Image 4, the target has more color variation and slightly better detail, particularly in the pumpkin's surface texture and the appearance of the wood surface. However, it lacks the high level of detail seen in Images 0 through 3. It surpasses Image 4 by not being a single color and having texture, but it doesn't reach the quality of Image 3, which has a clearer shape and more defined texture.\n\nIndex: 4",
+                "The target image appears to have a lower texture quality compared to the example images. It shows visible artifacts and lacks the sharpness and detail seen in others, particularly in the RGB view. Compared to Image 4, which features a simplistic texture but clean application, the target object demonstrates inconsistent stitching of textures and a lack of detail.\n\nIndex: 5"
+            ],
+            "score": [
+                2.3333333333333335,
+                3.3333333333333335,
+                5.0
+            ],
+            "mean_score": 3.555555555555556,
+            "median_score": 3.3333333333333335
+        },
+        "material": {
+            "analysis": [
+                "The target image has metallic and roughness maps with little detail and segmentation, similar to Image 3. However, the roughness map on the target shows slightly more variation than Image 3, but not as much as Image 2, which has defined segments and patterns. The target fits between Image 3 and Image 2.\n\nIndex: 3"
+            ],
+            "score": [
+                4.333333333333333
+            ],
+            "mean_score": 4.333333333333333,
+            "median_score": 4.333333333333333
+        },
+        "plausibility": {
+            "analysis": [
+                "The target image seems to lack 3D plausibility due to its irregular shape and incomplete model structure. It resembles a 3D scan with visible artifacts and does not accurately portray the object with proper proportion and form. Comparing it to the example images, it is less realistic than Image 4.\n\nIndex: 5",
+                "The target image displays significantly deteriorated plausibility compared to the example images. The object appears fragmented and lacks the cohesive structure present in the examples. Additionally, the textures seem incomplete and not accurately projected onto the model, which reduces its realism. Therefore, it is worse than Image 4.\n\nIndex: 5",
+                "The target image appears to lack the structural coherence and plausibility compared to the example images. The model shows incomplete geometry and texture issues which detract from its realism, making it look fragmented. This is significantly less realistic than even Image 4, which maintains a consistent and plausible shape. Therefore, it is placed as worse than Image 4.\n\nIndex: 5"
+            ],
+            "score": [
+                5.0,
+                5.0,
+                5.0
+            ],
+            "mean_score": 5.0,
+            "median_score": 5.0
+        },
+        "artifacts": {
+            "analysis": [
+                "The target image exhibits significant artifacts, including noise and incomplete structures. Compared to Image 4, the target model is significantly less clean and detailed. Image 4 maintains a complete structure despite lower polygon count, while the target image lacks coherence and clarity in both geometry and texture.\n\nIndex: 5",
+                "The target image appears quite noisy and contains significant artifacts, particularly around the edges of the object. The geometry and texture do not seem clean compared to the examples. It is worse than Image 4, which is the last in the sorted list.\n\nIndex: 5"
+            ],
+            "score": [
+                5.0,
+                5.0
+            ],
+            "mean_score": 5.0,
+            "median_score": 5.0
+        },
+        "preference": {
+            "analysis": [
+                "The target image demonstrates poor geometry and numerous artifacts, which result in a less plausible 3D appearance. Compared to Image 4, the target model lacks detail and clarity, especially in texture and material quality, indicating it is worse in overall preference.\n\nIndex: 5",
+                "The target image has significant artifacts, as evidenced by the torn and irregular surfaces around the object, affecting both geometric and texture quality. It lacks the clarity and completeness seen in even the lowest-ranked example, Image 4. The image falls short in terms of material quality and 3D plausibility, with evident issues in rendering.\n\nIndex: 5"
+            ],
+            "score": [
+                5.0,
+                5.0
+            ],
+            "mean_score": 5.0,
+            "median_score": 5.0
+        }
+    },
+    {
+        "metadata": {
+            "gobjaverse_index": "59/309764",
+            "objaverse_index": "000-059/f4c8ebc85f7b44b7ae48957c9011585e.glb"
+        },
+        "geometry": {
+            "analysis": [
+                "** The target image shows a well-detailed car model with smooth curves and intricate elements like decals and structural outlines, as highlighted by its normal map. Compared to the example images, the target model demonstrates more complex geometry than Image 4 (which only features simple block shapes) and Image 3 (which shows more angular and less-detailed forms typical of mechanical objects). However, it lacks the organic complexity and minute detailing seen in Image 0, which captures intricate shapes and textures of organic objects.\n\n**Index:** 3",
+                "The target image depicts a race car model with smooth curves and a well-executed structure. Comparing it to the examples, the geometry holds more detail and complexity than Image 4, which represents a simple cookie shape. However, it lacks the intricate detailing of Image 1, which portrays a desk lamp with articulated parts and finer geometry. Therefore, the target model is better than Image 3, a cake model, due to its more detailed design and clear structure.\n\nIndex: 3",
+                "The target image features a car model with detailed geometry and smooth transitions in the normal map, which showcases its fine-detailed shape. This level of detail surpasses the simplistic design observed in Image 4 and is more intricate than the models depicted in Images 3 and 2. However, it lacks some of the more complex features evident in the top-ranked images, such as Image 0. Therefore, the target model is better than Image 3 but does not surpass Image 2.\n\nIndex: 3"
+            ],
+            "score": [
+                2.0,
+                3.0,
+                3.0
+            ],
+            "mean_score": 2.6666666666666665,
+            "median_score": 3.0
+        },
+        "texture": {
+            "analysis": [
+                "The target image shows a high level of detail in both the RGB and albedo textures, with clear, vibrant colors and intricate patterns. Compared to Images 0 through 2, the target image displays richer, more varied textures and more accurate color representation, suggesting higher fidelity. It surpasses Image 2 due to its detailed and varied color patterns but does not reach the level of complexity and texture fidelity seen in Image 1.\n\nIndex: 2"
+            ],
+            "score": [
+                2.0
+            ],
+            "mean_score": 2.0,
+            "median_score": 2.0
+        },
+        "material": {
+            "analysis": [
+                "** The target image has a metallic map that is very uniform, with no variation between metallic and non-metallic areas. The roughness map also lacks detail, with little subtlety or variation. When comparing with the provided examples, the target image lacks the segmentation and fine-grained patterns seen in higher-quality maps. It is most similar to Image 4, which also shows minimal trait distinction in its maps.\n\n**Index:** 5"
+            ],
+            "score": [
+                4.666666666666667
+            ],
+            "mean_score": 4.666666666666667,
+            "median_score": 4.666666666666667
+        },
+        "plausibility": {
+            "analysis": [
+                "The target image features a highly detailed and realistic 3D model of a car, with vibrant colors and precise textures that closely resemble a real-world object. In comparison, Images 0, 1, and 2 demonstrate moderately realistic models but lack in either texture or shape complexity. Image 3 and Image 4 display simpler, less plausible models with less detail relative to the target object. Therefore, the target image surpasses Image 2 but is slightly less sophisticated than Image 1 due to its slightly exaggerated details.\n\nIndex: 2",
+                "** The target image of the car possesses high plausibility due to its detailed and realistic design, accurate proportions, and recognizable shape, closely resembling a real-world object. This level of detail and realism surpasses the simplistic and abstract nature of Images 2, 3, and 4. However, it does not quite achieve the humanoid complexity of Image 0.\n\n**Index:** 1"
+            ],
+            "score": [
+                1.6666666666666667,
+                1.0
+            ],
+            "mean_score": 1.3333333333333335,
+            "median_score": 1.3333333333333335
+        },
+        "artifacts": {
+            "analysis": [
+                "The target image features a 3D model of a car that appears clean and well-textured with no visible artifacts, suggesting it should rank highly based on the artifact-free criterion. Compared to the example images, the model has more detail and less noise than Images 2, 3, and 4, displaying better geometry and texture quality. The model is slightly less detailed than Image 0, which has intricate textures and smooth geometry. The car falls between the first two images in terms of quality, considering the clarity and richness of texture.\n\nIndex: 1"
+            ],
+            "score": [
+                1.0
+            ],
+            "mean_score": 1.0,
+            "median_score": 1.0
+        },
+        "preference": {
+            "analysis": [],
+            "score": [],
+            "mean_score": null,
+            "median_score": null
+        }
+    },
+    {
+        "metadata": {
+            "gobjaverse_index": "79/408477",
+            "objaverse_index": "000-079/b08c006f5c164edebd9749351efb0a0c.glb"
+        },
+        "geometry": {
+            "analysis": [
+                "The target image consists of a structure with a grid-like frame, which shows a level of detail and intricacy greater than the very simplistic forms seen in Image 4, which uses basic geometric forms. However, it lacks the fine detailing and realism present in Image 0. It surpasses Image 4 due to its more complex and less primitive structure but doesn't contain the artistic detailing of the higher-ranked models. Therefore, the target image is better than Image 4 because it demonstrates a more detailed structure but is less detailed than higher-ranked models.\n\nIndex: 4",
+                "The target image depicts a structure with a grid-like pattern, which offers more geometric detail than the primitive rectangular prism in Image 3 but less complex geometry compared to the robot in Image 0. However, it appears more detailed than the overly simplistic frame in Image 2. Therefore, its index is between Image 2 and Image 3.\n\nIndex: 3",
+                "The target image has a simple, geometric structure made primarily from rectangular prisms. Its details and normal map render it less detailed compared to the twisted shapes of Image 0 and the intricate elements of Image 2. It is more complex than the primitive sphere in Image 3 but lacks the detailing present in Image 4. Thus, it fits between Image 3 and Image 4.\n\nIndex: 4"
+            ],
+            "score": [
+                3.6666666666666665,
+                3.5,
+                4.0
+            ],
+            "mean_score": 3.722222222222222,
+            "median_score": 3.6666666666666665
+        },
+        "texture": {
+            "analysis": [
+                "The target image has a uniform color and lacks detailed textures compared to the examples. It has less detail even than Image 4, which, despite being simplistic, has some variance in texture. This makes the target image the least detailed with respect to texture quality among the provided options.\n\nIndex: 5",
+                "The target image exhibits a single uniform color with minimal detail in the texture, which is characteristic of low-frequency textures. This is similar to the simpler models with less texture detail like Image 4. The details are significantly simpler compared to Images 0, 1, and 2, which exhibit more complex and detailed textures.\n\nIndex: 5",
+                "The target image has a simple, monochromatic texture with minimal detailing, similar to Image 4, which also lacks intricate texture details. In comparison to Images 0, 1, 2, and 3, which offer richer and more detailed textures, the target image is less detailed and lower in fidelity. Therefore, the target image is worse than Image 4 due to its lack of texture detail.\n\nIndex: 5"
+            ],
+            "score": [
+                5.0,
+                4.666666666666667,
+                4.666666666666667
+            ],
+            "mean_score": 4.777777777777779,
+            "median_score": 4.666666666666667
+        },
+        "material": {
+            "analysis": [
+                "The target image's metallic and roughness maps show a consistent and flat pattern with no segmentation or fine-grained details, indicating a low level of material quality. Comparing it to the example images, it lacks the subtle variations present in Image 0 and Image 1, which have more detailed and realistic maps. The target image is most similar to Image 4, which also shows simplified, flat maps. Therefore, the target image is equally as low quality as Image 4.\n\nIndex: 4",
+                "** The target object's metallic map shows consistent black, indicating no metallic regions, similar to Images 2, 3, and 4. The roughness map of the target object also appears flat and lacks subtle variations, indicating low quality. This smoothness is comparable to that in Images 3 and 4. While Image 2 has slightly more variation in its roughness, the lack of detail and segmentation in the target object further likens it to Image 4.\n\n**Index:** 5"
+            ],
+            "score": [
+                4.0,
+                5.0
+            ],
+            "mean_score": 4.5,
+            "median_score": 4.5
+        },
+        "plausibility": {
+            "analysis": [
+                "The target image features a highly accurate and detailed 3D representation of a structure, showcasing realistic proportions and defined shapes. Compared to the other models, it demonstrates a higher degree of plausibility. It is more plausible than the simple, blocky structures of Images 3 and 4, which lack realism and detail. It surpasses the moderately detailed design of Image 2, as well as the abstract form of Image 1. However, it does not exceed the intricacy and realism seen in Image 0. Therefore, its index is between Image 1 and 0.\n\nIndex: 1",
+                "The target image represents a wireframe structure, focusing on architectural elements, which differentiates it from organic and detailed textures seen in images like the bottle or the decorative disk. The plausibility of the model relies on its geometric symmetry and architectural accuracy, appearing less complex and detailed compared to the decorative disk in Image 1. However, it surpasses the abstraction seen in Image 4, which is a simplistic representation of a ship and lacks intricate detailing. Therefore, its place is between Image 2 and Image 3.\n\nIndex: 3",
+                "The target image shows a 3D model with a clear and structured shape, resembling a realistic architectural framework with well-defined proportions and shapes. When compared to Example Images 3 and 4, the target is more structurally sound and plausible as a real-world object. However, it lacks the detail and complexity seen in Example Images 0 and 1. Therefore, the target image is better than Image 2 but worse than Image 1 based on realism and structural plausibility.\n\nIndex: 2"
+            ],
+            "score": [
+                1.0,
+                4.0,
+                2.3333333333333335
+            ],
+            "mean_score": 2.4444444444444446,
+            "median_score": 2.3333333333333335
+        },
+        "artifacts": {
+            "analysis": [
+                "The target image displays simplistic geometry with an open frame structure, similar to Image 3 but slightly more detailed in the grid elements, suggesting a more purposeful design than Image 4. However, its lack of solid surfaces makes it less defined compared to the more complete structure in Image 3. Therefore, its index is better than Image 4 but worse than Image 3.\n\nIndex: 5",
+                "The target image exhibits a clean and well-defined geometric structure with no visible artifacts or noise. It appears more polished than Image 3, which seems to have less complex or detailed geometry, but not as refined as Image 2, which has a clearer texture definition and structure.\n\nIndex: 3",
+                "The target image presents a clean, structured design with a clear geometric layout, exhibiting minimal noise and artifacts. This places it above Image 2, which shows a low-poly, noisy model with a lack of meaningful structure. However, the target image does not surpass Image 1, which has intricate detailing and a complete form. Therefore, based on the artifact-free criterion, the target image is better than Image 2 but worse than Image 1.\n\nIndex: 3"
+            ],
+            "score": [
+                4.5,
+                3.6666666666666665,
+                3.0
+            ],
+            "mean_score": 3.722222222222222,
+            "median_score": 3.6666666666666665
+        },
+        "preference": {
+            "analysis": [
+                "The target image shows a well-defined and detailed geometric structure with a focus on clean lines and symmetry, suggesting strong geometry quality. However, it lacks texture and material complexity, which may place it lower in texture and material quality compared to some of the more detailed examples. While it is artifact-free, it may not match the 3D plausibility of the more complex models such as Image 0 or 1. It surpasses the simplicity of Image 4 but doesn't achieve the visual fidelity of higher-ranked images.\n\n**Index**: 4",
+                "The target image, which represents a simple wireframe structure, exhibits a distinct lack of textures and materials compared to the example images. It has a high geometry quality due to its clean, uniform construction but lacks texture and material details. It shows fewer artifacts compared to Image 3, which has noticeable distortions. The target falls between Image 2 and Image 3, as it shares some geometric clarity with Image 2 but lacks the detailed texture and materials.\n\nIndex: 3"
+            ],
+            "score": [
+                3.5,
+                3.0
+            ],
+            "mean_score": 3.25,
+            "median_score": 3.25
+        }
+    },
+    {
+        "metadata": {
+            "gobjaverse_index": "84/434310",
+            "objaverse_index": "000-084/dcda5d0317974a91bf950b3f3d5a5877.glb"
+        },
+        "geometry": {
+            "analysis": [
+                "The target image exhibits more detailed geometry than Image 4, as evident in the intricate shapes of the plant leaves and pots, which are more complex than the simple chair design of Image 4. However, the geometry quality does not surpass that of Image 3, which features a more intricate structure with various shapes and elements. Therefore, the target image is better than Image 4 but worse than Image 3.\n\nIndex: 4",
+                "The target image exhibits moderate detail, especially in the leaves and pots. It shows more complexity than the simple cylindrical and rectangular images, which lack intricate geometry. However, it does not reach the level of detail found in the first unicycle image, where fine details are prominent in the spokes and seat.\n\nIndex: 3",
+                "The target image demonstrates a variety of objects, such as plants and pots, but lacks intricate geometry details compared to Image 0. The leaves and pots are relatively simple in shape, with less complexity and nuance in the normal map details. However, it is more detailed than Image 4, which consists of flat cookies with minor protrusions.\n\nIndex: 4"
+            ],
+            "score": [
+                3.3333333333333335,
+                3.0,
+                3.6666666666666665
+            ],
+            "mean_score": 3.3333333333333335,
+            "median_score": 3.3333333333333335
+        },
+        "texture": {
+            "analysis": [],
+            "score": [],
+            "mean_score": null,
+            "median_score": null
+        },
+        "material": {
+            "analysis": [
+                "The target image has a metallic map that shows no segmentation, indicating non-metallic surfaces similar to Examples 1 and 2. The roughness map lacks detail, comparable to Example 3. However, the detail in the RGB images of the target suggests better material quality than Example 4. Therefore, it is better than Example 4 but not as detailed as Example 3.\n\nIndex: 4",
+                "** The target image has a more detailed roughness map than Image 4, as it shows subtle variations that enhance the realism of the different materials, like the pots and plants. The metal map accurately separates the metallic and non-metallic sections similar to the higher-quality examples. Therefore, the given object is better than Image 4, which lacks variation, and fits right before Image 4 in the sequence.\n\n**Index:** 4"
+            ],
+            "score": [
+                4.0,
+                3.6666666666666665
+            ],
+            "mean_score": 3.833333333333333,
+            "median_score": 3.833333333333333
+        },
+        "plausibility": {
+            "analysis": [
+                "The target image demonstrates a realistic depiction of a plant with well-defined textures and appropriate proportions. It surpasses the abstract shape shown in Image 4, which lacks realism and clear structure. However, it does not exhibit the same level of complexity as the detailed character model in Image 0. Therefore, the target image is superior to Image 4 but not as refined as Image 0.\n\nIndex: 4"
+            ],
+            "score": [
+                4.0
+            ],
+            "mean_score": 4.0,
+            "median_score": 4.0
+        },
+        "artifacts": {
+            "analysis": [],
+            "score": [],
+            "mean_score": null,
+            "median_score": null
+        },
+        "preference": {
+            "analysis": [
+                "The target image features a scene with multiple objects, including plants and pots on a wooden surface. Compared to the example images, the target model demonstrates superior material quality, especially in the textures of the pots and wood surface. The model exhibits realistic geometry and 3D plausibility, surpassing the abstraction seen in Image 4 (tree). It also surpasses Image 3 (cake) in terms of texture realism and artifact-free rendering. However, compared to Images 0 and 1, it lacks unique geometry and fine detailing required for top placement. Therefore, it is better than Image 2 (bed) due to overall scene complexity and render quality.\n\nIndex: 3",
+                "The target object exhibits superior geometry and texture quality compared to Image 1, with well-defined details and realistic materials. It aligns closely with Image 0 in terms of 3D plausibility and being artifact-free. However, it does not surpass it due to slight differences in material intricacies.\n\nIndex: 1"
+            ],
+            "score": [
+                3.5,
+                1.0
+            ],
+            "mean_score": 2.25,
+            "median_score": 2.25
+        }
+    },
+    {
+        "metadata": {
+            "gobjaverse_index": "86/442613",
+            "objaverse_index": "000-086/85d72e1346bf4186962969709046e326.glb"
+        },
+        "geometry": {
+            "analysis": [],
+            "score": [],
+            "mean_score": null,
+            "median_score": null
+        },
+        "texture": {
+            "analysis": [
+                "The target image showcases a high level of detail and accurate color representation, especially noticeable in the intricate patterns and textures on the model. This places it above the models with more simplified or flat textures, such as Example Image 2 and Image 3. However, it does not surpass the complexity and texture quality of the top example, Image 0, which exhibits finer high-frequency details.\n\n**Index**: 1",
+                "The target image displays a high level of detail and varied colors, especially in the intricate components like the cloud and ring. This makes it superior to the images with very simplistic and flat textures, such as Image 4, which lacks detail in its textures. Compared to Image 0, the target's texture quality is less complex, lacking the finer details and realistic color gradients present there.\n\nTherefore, its quality surpasses that of Image 4 but does not quite reach the complexity and fidelity of Image 0. Given this assessment, the target object should be positioned between Image 3 and Image 4.\n\nIndex: 4"
+            ],
+            "score": [
+                1.0,
+                2.3333333333333335
+            ],
+            "mean_score": 1.6666666666666667,
+            "median_score": 1.6666666666666667
+        },
+        "material": {
+            "analysis": [
+                "** The target image demonstrates a high level of detail in its material representation, particularly in the roughness map where subtle variations and intricate patterns are visible. It shows more segmentation and complexity compared to Images 3 and 4. The metallic map does not display a wide range of metallic sections, similar to earlier images in the sequence, but the enhanced detail in roughness compensates for this. Considering the level of detail, it is between Images 2 and 3.\n\n**Index:** 3",
+                "** The target image demonstrates some detail in the metallic map and roughness map; however, they are predominantly solid shapes and lack fine-grained patterns that enhance realism. Image 3 and Image 4 have minimal detail and solid maps, making them less realistic. Comparatively, the target image shares similar characteristics with Image 3 due to the noticeable lack of subtleties but maintains a slightly better definition due to its distinct, though simple, shapes.\n\n**Index:** 4",
+                "The target image exhibits a significant level of detail in both the metallic and roughness maps. The metallic map effectively distinguishes between metal and non-metal areas, providing a nuanced representation. The roughness map shows subtle variations that enhance realism, capturing fine details. This level of detailing in the material maps indicates a higher quality than Image 4, which shows less complexity and variation.\n\nTherefore, the target image ranks better than the least detailed example and is positioned before it in the sorting.\n\n**Index**: 4"
+            ],
+            "score": [
+                3.0,
+                4.0,
+                4.5
+            ],
+            "mean_score": 3.8333333333333335,
+            "median_score": 4.0
+        },
+        "plausibility": {
+            "analysis": [
+                "The target image displays a more complex structure and better 3D plausibility than Image 4, with a unique design and well-crafted elements. However, it lacks the realistic detail and accurate proportions evident in Image 3's architectural model.\n\nIndex: 4"
+            ],
+            "score": [
+                3.0
+            ],
+            "mean_score": 3.0,
+            "median_score": 3.0
+        },
+        "artifacts": {
+            "analysis": [
+                "The target image appears to be high-quality, showing a well-defined and clean 3D model with no apparent artifacts or noise. The texture and geometry are clear and detailed, surpassing the noisy and distorted model in Image 4. It is visually coherent and better constructed than Image 3, which has noticeable imperfections in structure. However, it does not surpass the quality seen in Image 2, which has a very precise and artifact-free appearance. Therefore, the target image is better than Image 3 but worse than Image 2.\n\nIndex: 3"
+            ],
+            "score": [
+                3.0
+            ],
+            "mean_score": 3.0,
+            "median_score": 3.0
+        },
+        "preference": {
+            "analysis": [],
+            "score": [],
+            "mean_score": null,
+            "median_score": null
+        }
+    },
+    {
+        "metadata": {
+            "gobjaverse_index": "123/629190",
+            "objaverse_index": "000-123/d5226a3e5eae4ca4a06bf35ac1ad4aa8.glb"
+        },
+        "geometry": {
+            "analysis": [
+                "The target image shows a high level of geometric detail with a complex and intricate structure, which is evident in both the RGB and normal map views. This surpasses the simplistic and blocky geometry of Image 4, which features primitive shapes. However, it does not match the fine intricacies and clear detailing of Image 0, such as seen in the detailed landscape elements. Therefore, the target image is better than Image 4 but lacks the finesse of Image 3.\n\nIndex: 4",
+                "The target image demonstrates a high level of geometric complexity with a detailed and intricate structure, evident in the normal map. This complexity surpasses Image 4, which depicts a simpler geometric layout, such as a tree. However, it is less intricate than Image 0, which has a highly detailed and accurate normal map over its complex shape. Therefore, the target image fits in the middle range of the examples.\n\nIndex: 3"
+            ],
+            "score": [
+                4.0,
+                2.0
+            ],
+            "mean_score": 3.0,
+            "median_score": 3.0
+        },
+        "texture": {
+            "analysis": [
+                "** The target image lacks detailed texture quality and features a simplistic color scheme, with minimal variation and detail, similar to Image 4. Image 4 has a low-detail texture with simple, flat colors. The target model has minimal high-frequency details and features, which places it on the lower end of texture fidelity. Therefore, the target image does not surpass any of the provided examples and is worse than Image 4 in terms of texture quality.\n\n**Index:** 5",
+                "The target image exhibits a moderate level of detail and color variation, but it lacks the high-frequency texture details found in some of the higher-quality examples, such as Image 0. Compared to Image 4, the target has more intricate designs but still lacks the fine details and color fidelity observed in higher-ranked images. Therefore, it fits worse than Image 2 but better than Image 3.\n\nIndex: 3"
+            ],
+            "score": [
+                5.0,
+                3.6
+            ],
+            "mean_score": 4.3,
+            "median_score": 4.3
+        },
+        "material": {
+            "analysis": [
+                "** The target image demonstrates a distinct segmentation and fine-grained patterns in both the metallic and roughness maps, similar to Image 4. However, the complexity and subtle variations in the patterns are slightly less than those in Image 3. Therefore, its quality is slightly better than Image 4 but not as high as Image 3.\n\n**Index:** 4",
+                "** The target image shows a more detailed and segmented roughness map compared to many of the example images, specifically Images 3 and 4, which have less detailed roughness maps. The detailed metallic_map in the target image also suggests a level of intricacy not seen in the examples. Based on these observations, the target image surpasses Image 3 but is not as detailed as Image 2.\n\n**Index:** 3"
+            ],
+            "score": [
+                3.6666666666666665,
+                2.3333333333333335
+            ],
+            "mean_score": 3.0,
+            "median_score": 3.0
+        },
+        "plausibility": {
+            "analysis": [
+                "The target image has a complex structure with a somewhat abstract and artistic design. Its shape and composition do not closely resemble any particular real-world object compared to the examples provided. While it has a unique and intricate pattern, it lacks the realistic proportions and details seen in the higher-ranked example images. \n\nIndex: 5",
+                "The target image has a blocky, abstract appearance and lacks realism compared to the other examples. Image 4, while simplistic, still maintains recognizable shapes and form, such as a potted flower, which aligns more with the criteria of plausibility. The target image does not resemble a real-world object or maintain accurate proportions as effectively as this and the other examples.\n\nIndex: 5",
+                "The target image appears more abstract and less realistic in terms of shape and resemblance to any real-world object, compared to all the example images. The example images, although varied, depict more recognizable and plausible objects or scenes. The target model lacks the proportionality and recognizable structure seen in the examples.\n\nIndex: 5"
+            ],
+            "score": [
+                4.666666666666667,
+                4.0,
+                5.0
+            ],
+            "mean_score": 4.555555555555556,
+            "median_score": 4.666666666666667
+        },
+        "artifacts": {
+            "analysis": [
+                "The target image appears to have a voxel-like structure with a high level of geometric complexity, but it also shows a high degree of artifact-like characteristics due to its voxel nature. Compared to Image 4, the target has more intrinsic noise and artifacts in its geometry, which reduces the clarity and meaningfulness of the 3D structure. Therefore, it does not surpass the quality of Image 4, which has a cleaner and more coherent structure.\n\nIndex: 5",
+                "** The target image exhibits a high level of noise and geometric artifacts compared to the example images. The voxelized appearance and lack of clear structure place it below Image 4. The simplistic, low-poly nature and lack of meaningful detail suggest it is of lower quality according to the given criteria.\n\n**Index:** 5",
+                "The target image is better than Image 4 due to its clear structure and better geometry but worse than Image 3, as it still exhibits some level of noise and lacks detail compared to the higher quality examples. Therefore, its index is 4.\nIndex: 4"
+            ],
+            "score": [
+                5.0,
+                4.666666666666667,
+                4.5
+            ],
+            "mean_score": 4.722222222222222,
+            "median_score": 4.666666666666667
+        },
+        "preference": {
+            "analysis": [
+                "The target image demonstrates a unique, abstract geometry that is different from the realistic or stylized approaches seen in Images 0, 1, 2, and 3. However, it lacks detailed textures and materials, affecting its 3D plausibility and overall quality. This places it above Image 4, which has notable geometric and texture issues.\n\nIndex: 4",
+                "The target image's geometry and texture suggest it is a stylized or abstract representation, rather than a realistic depiction, positioning it closer to Image 4's geometric design but more complex. The target image's use of basic shapes and colors seems less sophisticated than Images 0 and 1, which show more realistic forms and materials. Therefore, the target aligns more closely in concept and execution with Image 3, surpassing the simplicity of Image 4.\n\nIndex: 4",
+                "The target image exhibits a unique and intricate design with clear geometry, and distinct textures and colors. However, it lacks material plausibility and has noticeable artifacts. Compared to the example images, the target model is worse than Image 4 due to these issues, particularly in material quality and artifact-free presentation.\n\nIndex: 5"
+            ],
+            "score": [
+                3.5,
+                4.0,
+                5.0
+            ],
+            "mean_score": 4.166666666666667,
+            "median_score": 4.0
+        }
+    },
+    {
+        "metadata": {
+            "gobjaverse_index": "138/702726",
+            "objaverse_index": "000-138/8aeb858f2ac24cf1970efb9dfc895b2d.glb"
+        },
+        "geometry": {
+            "analysis": [
+                "** The target image demonstrates a highly detailed and accurate representation in both geometry and normal map. It exhibits more fine details than Example Image 1, with smooth transitions and complex shapes that are better defined than those seen in Example Image 1. However, the target does not surpass Example Image 0 in terms of intricate geometry and realism.\n\n**Index:** 1",
+                "The target model has detailed geometric features, visible in its facial expressions, hand gestures, and clothing, which are well-represented in the normal map. It appears more detailed and accurate than Image 2 but not as intricate as Image 1, which has finer mechanical details. Therefore, the target model ranks better than Image 2 but worse than Image 1.\n\nIndex: 2"
+            ],
+            "score": [
+                1.0,
+                2.0
+            ],
+            "mean_score": 1.5,
+            "median_score": 1.5
+        },
+        "texture": {
+            "analysis": [
+                "The target image shows good texture quality with distinct colors and details. Comparing it to the sorted example images, it surpasses Image 2, which has reasonable texture detail but lacks the vibrancy and clarity seen in the target image. However, it does not exceed Image 1, which seems to display a slightly higher level of detail and richness in color variation. Therefore, the target image is better than Image 2 but worse than Image 1.\n\nIndex: 2"
+            ],
+            "score": [
+                1.6666666666666667
+            ],
+            "mean_score": 1.6666666666666667,
+            "median_score": 1.6666666666666667
+        },
+        "material": {
+            "analysis": [
+                "The target image closely resembles Image 3 in terms of the material map quality. Both the metallic map and roughness map are mostly undetailed, featuring large, uniform sections with few fine-grained patterns, indicating a lower level of material realism. Therefore, its index is 4.\n\nIndex: 4",
+                "The target image exhibits poor material detailing, with both the metallic and roughness maps showing little to no segmentation or fine variations. In comparison to the example images, the target object is worse than Image 4 due to its lack of texture details, as evidenced by the uniform nature of the material maps. Therefore, it fits at the end of the ranking.\n\nIndex: 5",
+                "The target image has a metallic map showing clearly defined regions, similar to the simpler examples, indicating minimal variation in metallic properties. The roughness map also lacks fine detail and subtle variations, appearing mostly uniform, which diminishes realism. Compared to the examples, the target model lacks the segmentation and pattern complexity seen in higher-ranked images. Therefore, its quality is lower than the rest of the provided examples.\n\nIndex: 5"
+            ],
+            "score": [
+                4.0,
+                4.0,
+                4.5
+            ],
+            "mean_score": 4.166666666666667,
+            "median_score": 4.0
+        },
+        "plausibility": {
+            "analysis": [
+                "The target image of the character model displays high 3D plausibility, with well-defined proportions and realistic features that reflect a recognizable cartoon character. The details and shape are more refined than those in Images 2, 3, and 4, which lack complexity and precision. It represents a higher level of realism compared to these images.\n\nIndex: 2",
+                "** The target image demonstrates a high level of detail and proportionate accuracy, particularly in capturing the shape and essence of a well-known character. Compared to Image 0, which shows a realistic bottle with appropriate textures and shapes, the target does not convey real-world realism to the same extent. However, it surpasses Images 1-4, which show basic, less detailed objects. Therefore, its index is 1.\n\n**Index:** 1"
+            ],
+            "score": [
+                2.0,
+                1.6666666666666667
+            ],
+            "mean_score": 1.8333333333333335,
+            "median_score": 1.8333333333333335
+        },
+        "artifacts": {
+            "analysis": [],
+            "score": [],
+            "mean_score": null,
+            "median_score": null
+        },
+        "preference": {
+            "analysis": [
+                "The target image demonstrates superior geometry, texture, and material quality compared to Images 2, 3, and 4 due to its detailed and plausible design without visible artifacts. However, it may not surpass Images 0 and 1 in overall preference due to less realistic styling compared to the top examples. Therefore, its index is 2.\n\nIndex: 2"
+            ],
+            "score": [
+                2.5
+            ],
+            "mean_score": 2.5,
+            "median_score": 2.5
+        }
+    },
+    {
+        "metadata": {
+            "gobjaverse_index": "138/704965",
+            "objaverse_index": "000-138/fe30c40ab1c540e4bf7df070677c9ed0.glb"
+        },
+        "geometry": {
+            "analysis": [
+                "The target image appears to have a complex and detailed geometry, particularly when compared to the more primitive shapes, like the tree or the structure-shaped models. The normal map suggests a high level of detail and accuracy in terms of surface irregularities, indicating it surpasses simpler models. However, the geometry may lack coherence and completeness when compared to more structured and complete models.\n\nIndex: 4",
+                "The target image displays a complex scene but lacks clarity and accurate geometry representation when compared to the example images. Image 0 has well-defined and detailed geometry, while the target image appears distorted and incomplete. The normal map does not reflect the intended shapes as accurately or with as much definition as the example images. Therefore, its index is 5.\n\nIndex: 5",
+                "The target image has visibly distorted geometry and lacks fine details, indicated by the irregular shapes and inconsistent normal map. Compared to the example images, it appears to be less detailed than Image 4, which still holds a coherent form. Therefore, the target image ranks worse than Image 4.\n\nIndex: 5"
+            ],
+            "score": [
+                3.0,
+                4.666666666666667,
+                4.333333333333333
+            ],
+            "mean_score": 4.0,
+            "median_score": 4.333333333333333
+        },
+        "texture": {
+            "analysis": [
+                "The target image lacks texture detail compared to all example images. Its textures appear blurry and incomplete. For instance, many surfaces in the target model lack coherent texture detail consistent with a high-quality presentation, especially when compared to models like the detailed chair or lamp examples. Therefore, it is worse than Image 4.\n\nIndex: 5",
+                "The target image exhibits high-frequency texture details and accurate color representation, especially noticeable in the accurate depiction of varied objects and structures. It surpasses the simplicity of Image 4, which has a very basic color palette with low detail. However, it lacks some of the clarity and definition seen in Image 3, where textures are more distinct and colors are more vibrant and varied.\n\nIndex: 4"
+            ],
+            "score": [
+                3.0,
+                4.0
+            ],
+            "mean_score": 3.5,
+            "median_score": 3.5
+        },
+        "material": {
+            "analysis": [
+                "The target image shows a lack of segmentation in its metallic map, with predominantly non-metallic regions. Its roughness map exhibits some variations, though these are minimal and less detailed compared to the example images. The overall material quality of the target image appears less refined than even the lowest-ranked example image.\n\nConsidering the criteria, the given model is unable to match the detail level of Image 4, which has clearer segmentation and subtle roughness variations. Therefore, the target image falls below this level.\n\nIndex: 5"
+            ],
+            "score": [
+                4.8
+            ],
+            "mean_score": 4.8,
+            "median_score": 4.8
+        },
+        "plausibility": {
+            "analysis": [
+                "The target image is a 3D model of an interior scene but appears incomplete, with many parts missing or not fully formed, affecting its plausibility. Compared to the example images, it has significant deficiencies in structure and detail, placing it below the recognizable and well-formed models seen in Images 0 to 2. Considering these factors, the target image does not meet the quality seen in Image 4 due to its lack of completeness and coherence.\n\nIndex: 5",
+                "The target image appears less plausible than Image 4 due to its incomplete and distorted structure, which significantly impacts its realism. The model lacks the clear proportions and coherence found in realistic 3D models of rooms or buildings, making it appear more artificial than the other examples.\n\nIndex: 5",
+                "The target image exhibits a distorted and incomplete reconstruction, appearing even less plausible and realistic than Image 4, which, despite its lack of details, presents a more coherent form. The target image lacks structural integrity and realistic textures, rendering it less plausible.\n\nIndex: 5"
+            ],
+            "score": [
+                5.0,
+                5.0,
+                4.666666666666667
+            ],
+            "mean_score": 4.888888888888889,
+            "median_score": 5.0
+        },
+        "artifacts": {
+            "analysis": [
+                "The target image is worse than Image 4 because it exhibits significant artifacts and lacks coherent geometry, making it less defined compared to the examples. Image 4 is already quite abstract and imprecise, but the target image degrades further in clarity and structure, largely owing to excessive noise and incomplete surfaces.\n\nIndex: 5",
+                "The target image exhibits significant artifacts and noise, as seen in the irregular geometry, broken surfaces, and excessive use of texture without meaningful structure. Compared to the example images, it is notably less artifact-free. Therefore, it is worse than Image 4, which, despite its simplistic design, maintains clear and consistent forms without broken geometry.\n\nIndex: 5",
+                "The target image exhibits significant artifacts and distortion, with evident noise and incomplete geometrical structures. It appears less artifact-free compared to the examples provided. Based on the criteria of being artifact-free, the target model is worse than Image 4 due to its fragmented and chaotic structure, likely resulting in a meaningless 3D form.\n\nIndex: 5"
+            ],
+            "score": [
+                5.0,
+                5.0,
+                5.0
+            ],
+            "mean_score": 5.0,
+            "median_score": 5.0
+        },
+        "preference": {
+            "analysis": [
+                "The target image is worse than Image 4 because it exhibits significant artifacts and lacks proper geometry and texture quality. The plausibility is also quite low compared to the example images provided.\n\nIndex: 5"
+            ],
+            "score": [
+                5.0
+            ],
+            "mean_score": 5.0,
+            "median_score": 5.0
+        }
+    },
+    {
+        "metadata": {
+            "gobjaverse_index": "146/744054",
+            "objaverse_index": "000-146/ce385d81ec31483f86996ecfcf872dc4.glb"
+        },
+        "geometry": {
+            "analysis": [
+                "The target image exhibits moderate geometric detail, particularly in the curvature and contours. It has more complexity and refined detail compared to Image 4, which features overly simplistic, blocky geometry. However, it lacks the intricate design and elements seen in Image 3, which has multiple distinct features. Therefore, the target image is better than Image 4 but worse than Image 3.\n\nIndex: 4",
+                "The target object is a simplistic design primarily composed of geometric shapes like cylinders and spheres, leading to lower geometry detail in comparison to more complex forms. Images 0, 1, and 3 have more intricate and detailed shapes. The target model does, however, appear more refined than Image 4, which features basic shapes as well. Therefore, the target image is better than Image 4 but worse than Image 3, because it lacks fine details and complex geometry.\n\nIndex: 5",
+                "The target model is relatively simple with minimal geometric details, predominantly straight lines and cylindrical shapes. Compared to the examples, Image 4 (simplistic geometric form) is more detailed. Therefore, the target is less detailed than Image 4.\n\nIndex: 5"
+            ],
+            "score": [
+                4.666666666666667,
+                4.666666666666667,
+                4.333333333333333
+            ],
+            "mean_score": 4.555555555555556,
+            "median_score": 4.666666666666667
+        },
+        "texture": {
+            "analysis": [
+                "The target image exhibits a simple single-color texture with minimal detail and lacks the high-frequency details emphasized in the criteria. It is most comparable to Image 4, which also has a simplistic texture. However, Image 4's texture still provides slight variations in detail that the target image lacks.\n\nIndex: 5",
+                "The target image has a uniform appearance with minimal texture detail and lacks high-frequency detail compared to the more detailed examples like Image 0 and Image 1. The target object resembles a single color tone similar to Image 4, indicating lower texture fidelity among the examples.\n\nIndex: 5"
+            ],
+            "score": [
+                5.0,
+                4.8
+            ],
+            "mean_score": 4.9,
+            "median_score": 4.9
+        },
+        "material": {
+            "analysis": [
+                "** The target image has a metallic map with clear binary segmentation, accurately defining the metallic regions similar to Example Image 0 but with less segmentation complexity. The roughness map lacks detailed variations, showing a relatively uniform surface, which is comparable to Example Image 4. Considering these aspects, the target image is better than Example Image 4 due to clearer metal delineation but does not surpass Example Image 3, which likely has richer roughness details.\n\n**Index:** 4",
+                "** The target image primarily consists of metallic regions with a consistent roughness map, indicating minimal surface detail. Compared to the examples, it lacks the segmented and nuanced detail present in Image 0. The target has somewhat more differentiation than Image 3 but lacks the detail of Image 2.\n\n**Index:** 4"
+            ],
+            "score": [
+                4.0,
+                2.5
+            ],
+            "mean_score": 3.25,
+            "median_score": 3.25
+        },
+        "plausibility": {
+            "analysis": [
+                "The target image, featuring a wall-mounted holder, showcases a well-defined and realistic shape that closely resembles a real-world object. It is more coherent and proportionate than Images 3 and 4. The target model surpasses Image 3 in terms of realistic structure but does not exceed the precision of Image 2.\n\nIndex: 3",
+                "The target image features detailed and realistic proportions consistent with a real-world object, similar to a toilet paper holder. Compared to the example images, this model exhibits high plausibility due to its accurate shape and metallic texture. It surpasses Images 3 and 4, which have more abstract and less realistic features. Therefore, it is better than Image 3 but not as detailed as the top images like Image 1 (the ice cream cone) or Image 0 (the mushroom).\n\nIndex: 3"
+            ],
+            "score": [
+                3.5,
+                3.0
+            ],
+            "mean_score": 3.25,
+            "median_score": 3.25
+        },
+        "artifacts": {
+            "analysis": [],
+            "score": [],
+            "mean_score": null,
+            "median_score": null
+        },
+        "preference": {
+            "analysis": [
+                "The target image shows a high level of geometry quality and texture detail, with realistic shading and materials compared to the examples. It surpasses Image 1 in material quality and 3D plausibility due to its refined design and absence of artifacts. However, it falls slightly short of the comprehensive detail seen in Image 0.\n\nIndex: 1"
+            ],
+            "score": [
+                2.2
+            ],
+            "mean_score": 2.2,
+            "median_score": 2.2
+        }
+    },
+    {
+        "metadata": {
+            "gobjaverse_index": "146/744538",
+            "objaverse_index": "000-146/e595e993b7734011a2feffa35105d153.glb"
+        },
+        "geometry": {
+            "analysis": [],
+            "score": [],
+            "mean_score": null,
+            "median_score": null
+        },
+        "texture": {
+            "analysis": [
+                "The target image consists of a single red color across its entire surface, lacking detail and high-frequency textures. This results in a texture quality that is lower than any of the example images provided. Each example image exhibits a greater level of detail and color variation compared to the target.\n\nIndex: 5",
+                "The target image consists of a single color without any texture details, similar to Image 4. Image 4 is a white model with no visible textures or details, placing it at the lowest quality in the provided examples. The target image has a uniform red color, which lacks the high-frequency texture and detail seen in Images 0, 1, 2, and 3. Therefore, the target image does not surpass any of the example images in terms of texture quality.\n\nIndex: 5"
+            ],
+            "score": [
+                5.0,
+                5.0
+            ],
+            "mean_score": 5.0,
+            "median_score": 5.0
+        },
+        "material": {
+            "analysis": [
+                "** The target image showcases a metallic map with distinct segmentation between metallic and non-metallic regions, and the roughness map captures fine-grained patterns that enhance realism. Compared to the example images, it appears more detailed than Image 2 due to its complex pattern in both the metal and roughness maps. However, it does not exceed the quality of Image 1, which shows slightly more refined detail in material representation.\n\n**Index:** 2",
+                "** The target image features a metallic map with clear segmentation and a roughness map showing detailed variations, contributing to a realistic material appearance. Compared to the ordered example images, the target object is more detailed than Image 2, which has minimal variation in both maps. However, it is lacking in the subtlety displayed in Image 1. Therefore, it fits better than Image 2 but worse than Image 1.\n\n**Index:** 2"
+            ],
+            "score": [
+                2.0,
+                2.0
+            ],
+            "mean_score": 2.0,
+            "median_score": 2.0
+        },
+        "plausibility": {
+            "analysis": [
+                "The target image has detailed features and complex design elements, which make it more realistic and plausible than Image 2 but less so than Image 1. The intricate shapes and realistic proportions of the wings and serpent contribute to its high plausibility.\n\nIndex: 2",
+                "The target image depicts a detailed and complex 3D model with intricate shapes and structures, such as wings and intertwined elements. These features are more realistic compared to the simplistic and less detailed models in Images 3 and 4. However, it does not surpass the realism and accuracy found in the more detailed texture and form present in Images 0 and 1. Thus, the target image fits comfortably between the medium-detailed structures seen in Images 1 and 2.\n\nIndex: 2",
+                "The target image showcases a complex and intricate structure with detailed wings and symmetrical features, which surpasses the simplicity and low detail of Image 3. However, it lacks the realistic texturing and recognizable forms seen in Image 2, which display more real-world resemblance.\n\nIndex: 3"
+            ],
+            "score": [
+                3.0,
+                2.0,
+                2.5
+            ],
+            "mean_score": 2.5,
+            "median_score": 2.5
+        },
+        "artifacts": {
+            "analysis": [
+                "** The target image is well-detailed and free of artifacts, displaying a complex structure similar to Image 1. It surpasses Image 2 due to its intricate geometry and lack of artifacts, but is not as pristine in texture as Image 0. Therefore, it's better than Image 2 but not on par with Image 1.\n\n**Index:** 2"
+            ],
+            "score": [
+                2.0
+            ],
+            "mean_score": 2.0,
+            "median_score": 2.0
+        },
+        "preference": {
+            "analysis": [
+                "The target image exhibits superior geometric complexity and texture quality compared to the overly simplistic forms of Image 4. Its higher material sophistication and plausible 3D structure place it well above Image 4. However, it falls short of the advanced details and realistic textures found in Images 0, 1, and 2, positioning it between Images 3 and 4.\n\nIndex: 4"
+            ],
+            "score": [
+                3.3333333333333335
+            ],
+            "mean_score": 3.3333333333333335,
+            "median_score": 3.3333333333333335
+        }
+    },
+    {
+        "metadata": {
+            "gobjaverse_index": "147/748447",
+            "objaverse_index": "000-147/b1a697c727024d399334c9ef6858fa74.glb"
+        },
+        "geometry": {
+            "analysis": [
+                "The target image exhibits a sophisticated and detailed geometry, especially evident in the wings and facial features of the dragon model. This intricacy surpasses the simplicity of the primitive shapes found in Images 3 and 4, which lack complexity and refined details. The normal map further clarifies these details with distinct gradients and varied depth, contributing to a higher perception of quality. Therefore, the target image ranks higher than Image 2 but is not as complex as Image 1, which portrays more intricate and nuanced geometry.\n\nIndex: 2"
+            ],
+            "score": [
+                1.5
+            ],
+            "mean_score": 1.5,
+            "median_score": 1.5
+        },
+        "texture": {
+            "analysis": [
+                "The target image shows a dragon model with mostly grey and yellow textures. The texture lacks high-frequency details, and the color variation is limited. Images 0, 1, and 2 display significant detail and color diversity in their textures, with Image 0 having the highest fidelity. Comparatively, Image 3 has moderate texture fidelity with distinguishable features and colors. The target image appears to be similar to Image 4, which mainly consists of a single color and lacks detail. Therefore, it is better than Image 4 due to more color variation but lacks the detail to surpass Image 3.\n\nIndex: 4",
+                "** The target image of the dragon model exhibits moderate texture quality. Compared to the examples, it has more color variation and detail than Image 4 (the cookie model), which lacks complexity and has a minimal color range. However, it has less texture detail and does not achieve the level of intricacy and realistic coloration exhibited in Image 0 (the cherub model). The dragon's texture shows some variation and moderate fidelity, placing it above the simple design of Image 4 but below the more detailed textures seen in the higher-ranked models. \n\n**Index:** 4",
+                "The target image shows moderate texture quality with some detail in the appearance and a fairly accurate color representation. It surpasses Image 3, which has a more simplistic style, but does not match the richness found in Image 2, which features more vibrant and varied colors.\n\nIndex: 3"
+            ],
+            "score": [
+                3.3333333333333335,
+                3.3333333333333335,
+                2.5
+            ],
+            "mean_score": 3.055555555555556,
+            "median_score": 3.3333333333333335
+        },
+        "material": {
+            "analysis": [
+                "The target image has a consistent metallic map with clear segmentation, similar to the top examples, but the roughness map lacks detailed variation. This places it better than Image 4 but worse than Image 3, which has more intricate roughness detailing enhancing realism. Therefore, the target model fits between Image 3 and Image 4 in terms of quality.\n\nIndex: 4"
+            ],
+            "score": [
+                4.5
+            ],
+            "mean_score": 4.5,
+            "median_score": 4.5
+        },
+        "plausibility": {
+            "analysis": [
+                "The target image displays a high degree of 3D plausibility with accurate proportions and realistic features, appearing more intricate and realistic compared to Images 1 through 4. The dragon model has well-defined features and a natural pose that contributes to its realism, surpassing the simpler and more abstract designs of the example images.\n\nIndex: 1",
+                "** The target image, a dragon, exhibits a high level of 3D plausibility with realistic proportions, shapes, and structural details. The anatomical features, such as wings and body structure, are portrayed accurately. This surpasses the simplistic and stylized nature of Image 0 but lacks the intricate details of Image 1, which more closely resemble real-world objects.\n\n**Index:** 1"
+            ],
+            "score": [
+                1.0,
+                1.3333333333333333
+            ],
+            "mean_score": 1.1666666666666665,
+            "median_score": 1.1666666666666665
+        },
+        "artifacts": {
+            "analysis": [
+                "The target image, which is a model of a dragon, exhibits a clean geometry with detailed textures and smooth surfaces. It appears artifact-free and well-structured, surpassing the simplicity and lack of detail in Image 4 which showcases a simplistic character model. However, it does not surpass the intricate architectural detail and complexity of Image 3. Therefore, its quality fits between these two examples.\n\nIndex: 4",
+                "The target image displays a 3D model that is relatively clean in geometry with no visible artifacts or noise. It appears to have more detail and a smoother texture compared to Images 3 and 4, which show simpler structures and some geometric artifacts. The target image is not as sharp or detailed as Image 0, with slightly less refined textures. Therefore, it is better than Image 2, which has low-poly characteristics and less complex geometry.\n\nIndex: 2"
+            ],
+            "score": [
+                4.0,
+                2.75
+            ],
+            "mean_score": 3.375,
+            "median_score": 3.375
+        },
+        "preference": {
+            "analysis": [
+                "** The target image of the dragon appears to have decent geometry and texture quality compared to the example images. The material quality seems passable, with clear details and no major artifacts. The 3D plausibility is also notable, especially in the context of example Image 3, which features less geometric detail. However, it doesn't surpass example Image 0, which exhibits higher overall quality. Compared to Image 3, the dragon is superior in terms of detailed geometry and texture.\n\n**Index:** 3",
+                "The target image features a dragon with relatively good geometry and texture quality, surpassing the voxel style of Image 4. However, compared to Image 3, the dragon lacks the solid, realistic material quality seen in the detailed textures of the bed model. Therefore, its index is between Image 3 and Image 4.\n\nIndex: 4"
+            ],
+            "score": [
+                2.25,
+                3.6666666666666665
+            ],
+            "mean_score": 2.958333333333333,
+            "median_score": 2.958333333333333
+        }
+    },
+    {
+        "metadata": {
+            "gobjaverse_index": "148/753974",
+            "objaverse_index": "000-148/cb62dbbec52649cc95234c5879ee1787.glb"
+        },
+        "geometry": {
+            "analysis": [
+                "The target image is a simple button shape with minimal geometric details, making it less intricate compared to the other provided models, which include complex structures like unicycles and cakes. The normal map reflects the simplicity of its geometry. Therefore, it is worse than Image 4 as it lacks the detailed geometry present in even the voxel-style model.\n\nIndex: 5",
+                "The target image presents a stylized floral shape with moderate detail, more intricate than the simple geometric forms of Images 3 and 4 but less detailed than the character models in Images 0 and 1. The normal map accurately represents its features, though it lacks complex geometry.\n\nIndex: 2",
+                "The target image is simplistic, primarily consisting of primitive shapes such as circles with minimal intricate geometry. It lacks the detailed geometry present in example images 0, 1, and 2. The presence of text adds a minor detail but does not significantly improve the overall geometry complexity. Example image 4 also has a blocky and simplistic structure, but with more complexity due to its voxel-like form.\n\nIndex: 5"
+            ],
+            "score": [
+                5.0,
+                3.3333333333333335,
+                5.0
+            ],
+            "mean_score": 4.444444444444445,
+            "median_score": 5.0
+        },
+        "texture": {
+            "analysis": [
+                "The target image, featuring a simplistic design primarily in a single color with minimal texture details, exhibits lower texture quality compared to Example 3. While Example 3 maintains a basic design, it includes more diverse elements which provide a slightly higher fidelity in texture representation. The target image lacks this level of detail and complexity.\n\nIndex: 5",
+                "The target image features a simple texture with a single color and minimal detail. Compared to Image 3, which has a more detailed texture with multiple elements, the target lacks high-frequency texture detail. Therefore, it is better than Image 4 but worse than Image 3 in terms of detail and color representation.\n\nIndex: 4",
+                "The target image predominantly features a single color with minimal texture details. The texture is flat, similar to Image 4, which lacks detail. However, the text detail on the target object adds slightly more variation than Image 4. Thus, the target image is better than Image 4 but worse than Image 3.\n\nIndex: 5"
+            ],
+            "score": [
+                5.0,
+                3.6666666666666665,
+                5.0
+            ],
+            "mean_score": 4.555555555555555,
+            "median_score": 5.0
+        },
+        "material": {
+            "analysis": [
+                "The target image has a metallic map entirely in black, indicating no metallic regions, and a roughness map that appears to be uniformly white, showing no detailed surface irregularities. This suggests very little to no material detail. Comparing it to the examples, Image 4 has more varied roughness patterns and material segmentation.\n\nTherefore, the given object is worse than Image 4 because it lacks detail and variation in both the metallic and roughness maps.\n\nIndex: 5",
+                "The target image has a metallic map that shows no segmentation or variation, indicating it is fully non-metallic. The roughness map is also uniform with no detailed variations, making it a low-quality roughness map. Compared to the examples provided, where Image 0 showcases segmentation and detail, and Images 1 through 4 progressively show less detail, the target image exhibits the least complexity in both maps. It is worse than Image 4 because it lacks the segmentation and subtle variations seen even in the lowest-quality example.\n\nIndex: 5",
+                "The target image has less material detail than the example images. The metallic map shows no segmentation, and the roughness map lacks variation or pattern details, giving an overall flat appearance. The comparison with the example images, where segmentation and fine-grained patterns can be seen to various extents, indicates that the target image is of lower quality.\n\nIndex: 5"
+            ],
+            "score": [
+                5.0,
+                5.0,
+                5.0
+            ],
+            "mean_score": 5.0,
+            "median_score": 5.0
+        },
+        "plausibility": {
+            "analysis": [
+                "The target image appears to have more realistic proportions and shapes compared to Image 4, but its plausibility in terms of realism does not surpass the characteristics of Image 3. Image 4's blocky and simplistic features do not match the real-world characteristics as effectively as the target image.\n\nIndex: 4",
+                "The target image, a 3D button, shows accurate proportions and a simplistic yet realistic design. Its shape and details are clear and consistent with real-world buttons. It surpasses Image 3, which lacks detail in structure, but is not as detailed as Image 2 or 1. Therefore, the target object fits between Image 3 and Image 4.\n\nIndex: 4",
+                "The target image appears simple in design but maintains realistic proportions and clearly defined shapes, which makes it more plausible than Image 4. However, it lacks the detailed texture and complexity seen in Image 3. Therefore, it fits between Images 3 and 4.\n\nIndex: 4"
+            ],
+            "score": [
+                3.6666666666666665,
+                4.5,
+                3.3333333333333335
+            ],
+            "mean_score": 3.8333333333333335,
+            "median_score": 3.6666666666666665
+        },
+        "artifacts": {
+            "analysis": [
+                "The target image demonstrates a smooth geometry and vibrant texture, similar to the simpler models but lacking the complexity of Image 0. It is less detailed and artistic compared to Image 1 and Image 2, and does not exhibit the noise or artifacts seen in Image 4 and Image 5. Therefore, it fits well between the third and fourth example images, considering its clean structure and simplicity.\n\nIndex: 3",
+                "The target image features a clean and well-defined geometric design with minimal texturing artifacts, placing it above examples with low-poly or noisy structures, like Image 2 and Image 4. It maintains clarity and simplicity better than Image 4, which appears fragmented. However, it lacks the detailed texture and complexity seen in the top examples like Image 0 and Image 1.\n\nIndex: 2"
+            ],
+            "score": [
+                3.0,
+                2.0
+            ],
+            "mean_score": 2.5,
+            "median_score": 2.5
+        },
+        "preference": {
+            "analysis": [],
+            "score": [],
+            "mean_score": null,
+            "median_score": null
+        }
+    }
+]
