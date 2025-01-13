@@ -2,7 +2,7 @@ import os
 from os import path as osp
 from abc import abstractmethod, ABC
 
-import jsonlines
+#import jsonlines
 from typing import List
         
 class BaseVLM(ABC):
@@ -10,13 +10,17 @@ class BaseVLM(ABC):
                  temperature: float,
                  max_tokens: int,
                  n_choices: int,
-                 api_key: str=None,)->None:
+                 api_key: str=None,
+                 tensor_parallel_size: int=1,
+                 pipeline_parallel_size: int=1)->None:
         super().__init__()
         
         self.model_name = model_name
         self.temperature = temperature
         self.max_tokens = max_tokens
         self.n_choices = n_choices
+        self.tensor_parallel_size = tensor_parallel_size
+        self.pipeline_parallel_size = pipeline_parallel_size
         
         self.client = None
         self.processor = None
@@ -25,12 +29,13 @@ class BaseVLM(ABC):
     
     def run(self, batch_inputset):
         tgt_gids, criteria, batch_vlm_message = self.make_vlm_input(batch_inputset)
-        batch_output = self.forward_vlm(tgt_gids, criteria, batch_vlm_message)
-
-        return batch_output
+        batch_outputset = self.forward_vlm_chat(tgt_gids, criteria, batch_vlm_message)
+        output = post_process(batch_outputset)
+        
+        return output
 
     def make_vlm_input(self, batch_inputset):
-        messages = []
+        messages = [] # List of contents
         gids = []
         criteria = []
         
@@ -44,7 +49,11 @@ class BaseVLM(ABC):
         return gids, criteria, messages
         
     @abstractmethod
-    def forward_vlm(self, tgt_gids, criteria, batch_inputs):
+    def forward_vlm_chat(self, tgt_gids, criteria, batch_inputs):
+        pass
+    
+    @abstractmethod
+    def post_process(self, batch_outputset):
         pass
     
     # Create open-ai batch file format

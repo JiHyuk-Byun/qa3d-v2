@@ -11,7 +11,8 @@ class OpenaiApiModel(BaseVLM):
                  temperature: float,
                  max_tokens: int,
                  n_choices: int,
-                 api_key: str=None,)->None:
+                 api_key: str=None,
+                 tensor_parallel_size: int=1)->None:
         super().__init__(model_name=model_name,
                          temperature=temperature,
                          max_tokens=max_tokens,
@@ -27,7 +28,7 @@ class OpenaiApiModel(BaseVLM):
         return client
     
     # for 1 question in iter * batch
-    def forward_vlm(self, tgt_gids, criteria, batch_inputs):
+    def forward_vlm_chat(self, tgt_gids, criteria, batch_inputs):
 
         answers = []
         gid_previous = ''

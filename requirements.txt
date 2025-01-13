@@ -1,2 +1,4 @@
 transformers
 vllm
+omegaconf
+flash-attn

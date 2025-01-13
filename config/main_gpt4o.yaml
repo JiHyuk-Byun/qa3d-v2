@@ -5,9 +5,11 @@ model:
   temperature: 1.0
   max_tokens: 256
   n_choices: 1
-
+  tensor_parallel_size: 4
+  pipeline_parallel_size: 4
+  
 experiment:
-  out_dir: outputs/2025-01-02/scoring_no-multi-choices
+  out_dir: outputs/test
   batch_inference: True
 
 data:

@@ -5,36 +5,38 @@ model:
   temperature: 1.0
   max_tokens: 4096
   n_choices: 3
+  tensor_parallel_size: 1
+  pipeline_parallel_size: 1
 
 experiment:
-  out_dir: outputs/
+  out_dir: outputs/test
   batch_inference: True
 
 data:
-  src_path: assets/gobajverse_280k
+  src_path: datasets/gobjaverse_280k_test/
   example:
-    use_example: True
     num_level: 5 
-    num_example_sampling: 3
-    sample_interval: 20
+    num_example_sampling: 5
+    sample_interval: 0
     sample_offset: 0
     meta_path: assets/example_scores.json
-  n_batch: 2
+  n_batch: 1
   n_workers: 4
   prefetch: 2
   pin_memory: False
 
 prompt:
   template_dir: assets/prompt_templates
+  use_example: True
   prompt_type: scoring
   input_types:
-    geometry: ['rgb', 'normal map']
-    texture: ['rgb', 'albedo']
-    material: ['rgb', 'metallic map', 'roughness map']
+    geometry: ['rgb', 'normal_map']
+    texture: ['rgb', 'albedo'] 
+    material: ['rgb', 'metallic_map', 'roughness_map']
     plausibility: ['rgb']
     artifacts: ['rgb']
     preference: ['rgb']
 
 stat:
-  src_path: assets/splits/
-  out_dir: outputs/stat
+  src_path: datasets/splits_test2/
+  time_threshold: 10800
