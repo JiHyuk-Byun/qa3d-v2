@@ -28,9 +28,12 @@ class BaseVLM(ABC):
         self.api_key = api_key
     
     def run(self, batch_inputset):
+        print("making VLM inputs...")
         tgt_gids, criteria, batch_vlm_message = self.make_vlm_input(batch_inputset)
+        print("Now forwarding...")
         batch_outputset = self.forward_vlm_chat(tgt_gids, criteria, batch_vlm_message)
-        output = post_process(batch_outputset)
+        print("Post processing output...")
+        output = self.post_process(tgt_gids, criteria, batch_outputset)
         
         return output
 

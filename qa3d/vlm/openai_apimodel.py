@@ -2,6 +2,7 @@ import os
 import base64
 import time
 
+from transformers import AutoProcessor, AutoTokenizer
 from openai import OpenAI
 
 from .basevlm import BaseVLM
@@ -27,9 +28,11 @@ class OpenaiApiModel(BaseVLM):
         
         return client
     
+
+
     # for 1 question in iter * batch
     def forward_vlm_chat(self, tgt_gids, criteria, batch_inputs):
-
+        
         answers = []
         gid_previous = ''
         
@@ -37,7 +40,7 @@ class OpenaiApiModel(BaseVLM):
             if gid != gid_previous:
                 print(f"\ngobjaverse_id: {gid}")
             print(f"\ncriteria: {criterion}")
-            
+
             try:
                 time.sleep(1)
                 answer = self.client.chat.completions.create(
@@ -62,6 +65,8 @@ class OpenaiApiModel(BaseVLM):
             
         return answers        
     
+    def post_process(self, batch_outputset):
+        pass
     # def _make_vlm_input(self, inputs): # List of content
     #     contents = []
     #     gids = []

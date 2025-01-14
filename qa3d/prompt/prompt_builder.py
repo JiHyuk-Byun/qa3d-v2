@@ -88,7 +88,7 @@ class PromptBuilder:
             criterion_prompt.extend([*asset_caption, *asset_img_prompt])
             input_images.extend(asset_img)
 
-            input_set = InputSet(criterion, asset.gid, criterion_prompt, asset.image, examplar_gids)
+            input_set = InputSet(criterion, asset.gid, criterion_prompt, asset.image, input_images, examplar_gids)
             #input_set.print_prompt()
             inputs.append(input_set)
             
@@ -100,7 +100,7 @@ class PromptBuilder:
         return  {'type': 'text',
                  'text': caption}
     
-    
+    # Using image url
     def _get_image_prompt(self, asset: Asset, criterion: str):
         input_imgs = []
         input_prompt = []

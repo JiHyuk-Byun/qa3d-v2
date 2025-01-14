@@ -9,7 +9,7 @@ model:
   pipeline_parallel_size: 4
   
 experiment:
-  out_dir: outputs/2025-01-03/scoring_no-multi-choices
+  out_dir: outputs/<DATE>/scoring_no-multi-choices
   batch_inference: True
 
 data:

@@ -5,11 +5,11 @@ model:
   temperature: 1.0
   max_tokens: 256
   n_choices: 1
-  tensor_parallel_size: 4
-  pipeline_parallel_size: 4
+  tensor_parallel_size: 1
+  pipeline_parallel_size: 1
   
 experiment:
-  out_dir: outputs/test
+  out_dir: outputs/<DATE>/test/gpt4o
   batch_inference: True
 
 data:
