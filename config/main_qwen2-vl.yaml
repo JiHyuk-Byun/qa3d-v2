@@ -1,15 +1,15 @@
 model:
-  model_name: Qwen/Qwen2-VL-7B-Instruct-GPTQ-Int4
+  model_name: Qwen/Qwen2-VL-72B-Instruct-GPTQ-Int4
   use_openai_api: False
   api_key:
   temperature: 0.1
   max_tokens: 256
   n_choices: 1
   tensor_parallel_size: 2
-  pipeline_parallel_size: 2
+  pipeline_parallel_size: 1
 
 experiment:
-  out_dir: outputs/<DATE>/qwen2-vl
+  out_dir: outputs/<DATE>/qwen2-vl72b/test
   batch_inference: True
 
 data:

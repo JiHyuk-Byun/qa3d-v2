@@ -25,7 +25,7 @@ class LocalInferModel(BaseVLM):
         self.processor, self.sampling_params, self.llm = self._initialize()
         
     def _initialize(self, 
-                    gpu_mem_util: int=0.6, 
+                    gpu_mem_util: int=0.8, 
                     #max_model_len: int=32768,
                     #max_num_batched_tokens=32768*4,
                     limit_mm_per_prompt: dict={'image': 24}):
