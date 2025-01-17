@@ -4,16 +4,15 @@ model:
   temperature: 0.1
   max_tokens: 256
   n_choices: 1
-  tensor_parallel_size: 2
-  pipeline_parallel_size: 1
+  tensor_parallel_size: 4
+  pipeline_parallel_size: 2
   gpu_memory_utilization: 0.8
   
 experiment:
-  out_dir: outputs/<DATE>/qwen2-vl72b/test
-  batch_inference: True
+  out_dir: outputs/<DATE>/qwen2-vl_72b/no-examples
 
 data:
-  src_path: datasets/gobjaverse_280k_test/
+  src_path: datasets/gobjaverse_1000/
   example:
     num_level: 5 
     num_example_sampling: 5
@@ -27,7 +26,7 @@ data:
 
 prompt:
   template_dir: assets/prompt_templates
-  use_example: True
+  use_example: False
   prompt_type: ordering
   input_types:
     geometry: ['rgb', 'normal_map']
@@ -38,5 +37,5 @@ prompt:
     preference: ['rgb']
 
 stat:
-  src_path: datasets/splits_test2/
-  time_threshold: 10800
+  src_path: datasets/splits/
+  time_threshold: 0
