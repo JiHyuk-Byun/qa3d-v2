@@ -13,7 +13,7 @@ CONDITION = {'scoring': r"Score[^\d]*(\d+)$",
              'ordering': r"Index[^\d]*(\d+)$",    # ordering
              }   # scoring
 GID_TO_OID_PATH = 'assets/gobjaverse_index_to_objaverse.json'
-EXAMPLE_META_PATH = '/workspace/QA3D-VLM/assets/example_scores.json'
+EXAMPLE_META_PATH = 'assets/example_scores.json'
 
 parser = ArgumentParser()
 parser.add_argument('--src_dir', '-s', type=str, default='outputs/2025-01-02/ordering/answers')
@@ -138,6 +138,7 @@ def main():
     
     # Read gid list
     gid_lst = glob.glob(osp.join(src_dir, '*', '*/'))
+    print(gid_lst[0])
     gid_lst = sorted(gid_lst, key=lambda x: int(x.split('/')[-3]+x.split('/')[-2]))
     result = []
     

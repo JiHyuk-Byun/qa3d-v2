@@ -12,15 +12,18 @@ class BaseVLM(ABC):
                  n_choices: int,
                  api_key: str=None,
                  tensor_parallel_size: int=1,
-                 pipeline_parallel_size: int=1)->None:
+                 pipeline_parallel_size: int=1,
+                 gpu_memory_utilization: float=0.8)->None:
         super().__init__()
         
         self.model_name = model_name
         self.temperature = temperature
         self.max_tokens = max_tokens
         self.n_choices = n_choices
+        
         self.tensor_parallel_size = tensor_parallel_size
         self.pipeline_parallel_size = pipeline_parallel_size
+        self.gpu_mem_util = gpu_memory_utilization
         
         self.client = None
         self.processor = None
@@ -28,26 +31,19 @@ class BaseVLM(ABC):
         self.api_key = api_key
     
     def run(self, batch_inputset):
+        print("making VLM inputs...")
         tgt_gids, criteria, batch_vlm_message = self.make_vlm_input(batch_inputset)
-        batch_outputset = self.forward_vlm_chat(tgt_gids, criteria, batch_vlm_message)
-        output = post_process(batch_outputset)
+        print("Now forwarding...")
+        batch_outputset = self.forward_vlm_chat(batch_vlm_message)
+        print("Post processing output...")
+        output = self.post_process(tgt_gids, criteria, batch_outputset)
         
         return output
 
+    @abstractmethod
     def make_vlm_input(self, batch_inputset):
-        messages = [] # List of contents
-        gids = []
-        criteria = []
-        
-        for input_set in batch_inputset:
-
-            messages.append([{"role": "user",
-                              "content": input_set.prompt}])
-            gids.append(input_set.gid)
-            criteria.append(input_set.criterion)
-            
-        return gids, criteria, messages
-        
+        pass
+    
     @abstractmethod
     def forward_vlm_chat(self, tgt_gids, criteria, batch_inputs):
         pass

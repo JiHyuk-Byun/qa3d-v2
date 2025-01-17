@@ -2,7 +2,9 @@ import os
 import base64
 import time
 
+from transformers import AutoProcessor, AutoTokenizer
 from openai import OpenAI
+from tqdm import tqdm
 
 from .basevlm import BaseVLM
 
@@ -22,22 +24,29 @@ class OpenaiApiModel(BaseVLM):
         self.client = self._initialize(api_key)
         
     def _initialize(self, api_key):
-
-        client = OpenAI(api_key=api_key)
+        return OpenAI(api_key=api_key)
         
-        return client
-    
-    # for 1 question in iter * batch
-    def forward_vlm_chat(self, tgt_gids, criteria, batch_inputs):
-
-        answers = []
-        gid_previous = ''
+    def make_vlm_input(self, batch_inputset):
+        messages = [] 
+        gids = []
+        criteria = []
         
-        for gid, criterion, message in zip(tgt_gids, criteria, batch_inputs):
-            if gid != gid_previous:
-                print(f"\ngobjaverse_id: {gid}")
-            print(f"\ncriteria: {criterion}")
+        for input_set in batch_inputset:
+
+            messages.append([{"role": "user",
+                              "content": input_set.prompt}])
+            gids.append(input_set.gid)
+            criteria.append(input_set.criterion)
             
+        return gids, criteria, messages
+
+    # for 1 question in iter * batch
+    def forward_vlm_chat(self, batch_inputs):
+        
+        answers = []
+    
+        # OPENAI API doesn't use batch-inference
+        for message in tqdm(batch_inputs):
             try:
                 time.sleep(1)
                 answer = self.client.chat.completions.create(
@@ -46,22 +55,36 @@ class OpenaiApiModel(BaseVLM):
                     max_tokens=self.max_tokens,
                     n=self.n_choices
                 )
-
-                response = []
-                for i in range(self.n_choices):
-                    response.append(answer.choices[i].message.content)
-            
             except Exception as e:
-                response = [str(e)]*self.n_choices
-                
-            print("response:", response)
+                answer = [str(e)]*self.n_choices
             
+            answers.append(answer)
+            
+        return answers        
+    
+    def post_process(self, gids, criteria, batch_outputset):
+        
+        answers = []
+        gid_previous = ''
+        for gid, criterion, output in zip(gids, criteria, batch_outputset):
+            if gid != gid_previous:
+                print(f'\n gobjaverse_id: {gid}')
+            print(f'\ncriteria: {criterion}')
+            
+            response = []
+            if isinstance(output, list): # Errored
+                response = answer
+            else: # Typical Answers 
+                for i in range(self.n_choices):
+                    generated_text = output.choices[i].message.content
+                    response.append(generated_text)
+                    print(f"response: {generated_text!r}")
+
             answers.append({'answers': response})
             
             gid_previous = gid
             
-        return answers        
-    
+        return answers
     # def _make_vlm_input(self, inputs): # List of content
     #     contents = []
     #     gids = []

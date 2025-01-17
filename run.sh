@@ -1,2 +1,3 @@
-python3 main.py -c 'config/main_gpt4o_scoring.yaml'
-python3 main.py -c 'config/main_gpt4o_ordering.yaml'
+CUDA_VISIBLE_DEVICES='1,2' python3 main.py -c config/main_qwen2-vl.yaml
+CUDA_VISIBLE_DEVICES='1,2' python3 main.py -c config/main_qwen2-vl.yaml
+CUDA_VISIBLE_DEVICES='1,2' python3 main.py -c config/main_qwen2-vl.yaml

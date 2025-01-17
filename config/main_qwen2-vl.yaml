@@ -1,15 +1,15 @@
 model:
-  model_name: Qwen/Qwen2-VL-7B-Instruct-GPTQ-Int4
-  use_openai_api: False
+  model_name: Qwen/Qwen2-VL-72B-Instruct-GPTQ-Int4
   api_key:
-  temperature: 1.0
-  max_tokens: 4096
-  n_choices: 3
-  tensor_parallel_size: 1
+  temperature: 0.1
+  max_tokens: 256
+  n_choices: 1
+  tensor_parallel_size: 2
   pipeline_parallel_size: 1
-
+  gpu_memory_utilization: 0.8
+  
 experiment:
-  out_dir: outputs/test
+  out_dir: outputs/<DATE>/qwen2-vl72b/test
   batch_inference: True
 
 data:
@@ -28,7 +28,7 @@ data:
 prompt:
   template_dir: assets/prompt_templates
   use_example: True
-  prompt_type: scoring
+  prompt_type: ordering
   input_types:
     geometry: ['rgb', 'normal_map']
     texture: ['rgb', 'albedo'] 

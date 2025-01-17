@@ -1,0 +1,45 @@
+{
+    "asset_gid": "84/434310",
+    "geometry": {
+        "0-answer-0": "Analysis: The given object is a detailed 3D model of a potted plant with a normal map that accurately represents the shape and texture of the plant. The geometry quality is high, with fine details and accurate normal map.\nScore: 5",
+        "1-answer-0": "Analysis: The given object is a 3D model of a potted plant. The geometry quality appears to be good, with clear and detailed shapes in the normal map. The plant and pot are well-defined, and the overall shape is accurate.\nScore: 4",
+        "2-answer-0": "Analysis: The given object has a detailed geometry with fine-detailed shapes, and the normal map accurately represents the intended shape.\nScore: 5",
+        "3-answer-0": "Analysis: The given object is a 3D model of a potted plant with detailed geometry and accurate representation of the plant's leaves and pot. The normal map shows clear and detailed surface normals, indicating good geometry quality.\nScore: 5",
+        "4-answer-0": "Analysis: The given object has a detailed geometry with accurate representation of the plant and the pot. The normal map shows clear details of the leaves and the pot.\nScore: 5"
+    },
+    "texture": {
+        "0-answer-0": "Analysis: The given object has a high level of detail in appearance and accurate color representation.\nScore: 5",
+        "1-answer-0": "Analysis: The given object...\nScore: 3",
+        "2-answer-0": "Analysis: The given object has a high level of detail in appearance and accurate color representation. The texture quality is good.\nScore: 4",
+        "3-answer-0": "Analysis: The given object has a high level of detail in appearance and accurate color representation. The texture quality is good.\nScore: 4",
+        "4-answer-0": "Analysis: The given object...\nScore: 3"
+    },
+    "material": {
+        "0-answer-0": "Analysis: The given object...\nScore: 3",
+        "1-answer-0": "Analysis: The given object has a simple shape with smooth surfaces. The metal map shows some segmentation, but the roughness map is quite uniform, indicating a lack of detail.\nScore: 2",
+        "2-answer-0": "Analysis: The given object has a clear and detailed metallic map, with distinct boundaries between metallic and non-metallic regions. The roughness map also shows fine details, with variations in surface texture. The RGB image complements the material maps by providing color information.\nScore: 5",
+        "3-answer-0": "Analysis: The given object has a high level of detail in the roughness map, with subtle variations in the surface texture. The metal map also shows a clear distinction between metallic and non-metallic regions. The RGB image provides a good representation of the object's color and lighting.\nScore: 5",
+        "4-answer-0": "Analysis: The given object...\nScore: 3"
+    },
+    "plausibility": {
+        "0-answer-0": "Analysis: The given object appears to be a 3D model of a potted plant.\nScore: 5",
+        "1-answer-0": "Analysis: The given object is a 3D model of a potted plant.\nScore: 4",
+        "2-answer-0": "Analysis: The given object is a 3D model of a potted plant.\nScore: 4",
+        "3-answer-0": "Analysis: The given object appears to be a 3D model of a potted plant.\nScore: 4",
+        "4-answer-0": "Analysis: The given object is a 3D model of a potted plant.\nScore: 4"
+    },
+    "artifacts": {
+        "0-answer-0": "Analysis: The given object is a 3D model of a potted plant.\nScore: 5",
+        "1-answer-0": "Analysis: The given object is a 3D model of a potted plant.\nScore: 5",
+        "2-answer-0": "Analysis: The given object is a 3D model of a potted plant with a table and a pen. The model appears to be clean and artifact-free, with no visible noise or artifacts.\nScore: 5",
+        "3-answer-0": "Analysis: The given object is a 3D model of a potted plant.\nScore: 5",
+        "4-answer-0": "Analysis: The given object is a 3D model of a potted plant.\nScore: 5"
+    },
+    "preference": {
+        "0-answer-0": "Analysis: The given object...\nScore: 3",
+        "1-answer-0": "Analysis: The given object...\nScore: 4",
+        "2-answer-0": "Analysis: The given object has a good overall geometry quality, with clear and well-defined edges. The texture quality is also good, with realistic and detailed textures on the surfaces. The material quality is also good, with a variety of materials and textures used effectively. The 3D plausibility is good, with the object appearing to be a realistic representation of a potted plant. There are no visible artifacts in the image.\nScore: 4",
+        "3-answer-0": "Analysis: The given object is a 3D model of a potted plant. The geometry quality is good, with a well-defined shape and smooth surfaces. The texture quality is also good, with clear and detailed textures on the leaves and pot. The material quality is good, with a realistic appearance of the plant and pot. The 3D plausibility is good, with a natural and realistic appearance of the plant. There are no visible artifacts in the image. Overall, the object is of good quality.\nScore: 4",
+        "4-answer-0": "Analysis: The given object is a 3D model of a plant in a pot. The model appears to be well-rendered with good texture and material quality. The geometry is also well-defined, and the 3D plausibility is high. There are no visible artifacts in the model.\nScore: 5"
+    }
+}

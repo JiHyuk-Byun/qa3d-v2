@@ -13,17 +13,20 @@ class PromptBuilder:
                  prompt_type: Literal['scoring', 'indexing'],
                  input_types: Dict[str, List[str]],
                  show_prompt: bool,
-                 use_example: bool):
+                 use_example: bool,
+                 image_encoding: bool):
+        
         super().__init__()
         
         self.use_example = use_example
         self.prompt_type = prompt_type if use_example else 'no_examples'
         self.input_types = input_types 
-
+        self.image_encoding = image_encoding
+        
         self.template_dir = template_dir
         self.criteria = list(input_types.keys())
         self.main_structure, self.criteria_instructions = self._read_templates()
-                                
+                 
         self.show_prompt = show_prompt        
         self.prompt: dict = self._generate_text_prompt()
 
@@ -88,7 +91,7 @@ class PromptBuilder:
             criterion_prompt.extend([*asset_caption, *asset_img_prompt])
             input_images.extend(asset_img)
 
-            input_set = InputSet(criterion, asset.gid, criterion_prompt, asset.image, examplar_gids)
+            input_set = InputSet(criterion, asset.gid, criterion_prompt, asset.image, input_images, examplar_gids)
             #input_set.print_prompt()
             inputs.append(input_set)
             
@@ -100,7 +103,7 @@ class PromptBuilder:
         return  {'type': 'text',
                  'text': caption}
     
-    
+    # Using image url
     def _get_image_prompt(self, asset: Asset, criterion: str):
         input_imgs = []
         input_prompt = []
@@ -109,13 +112,18 @@ class PromptBuilder:
             
             image = asset.image[input_type]
             asset_path = osp.join(asset.path, f'{input_type}.png')
-
+            
+            if self.image_encoding:
+                image_type = 'image_url'
+                image_input = {"url": f"data:image/jpeg;base64,{self._encode_image(asset_path)}"}
+            else:
+                image_type = 'image'
+                image_input = image
+            
             image_prompt = [{'type': 'text',
                              'text': f"{input_type}: "},
-                            {'type': 'image_url',
-                             'image_url': {
-                    "url": f"data:image/jpeg;base64,{self._encode_image(asset_path)}"
-                }}]
+                            {'type': image_type,
+                             image_type: image_input}]
             
             input_imgs.append(image)
             input_prompt.extend(image_prompt)

@@ -11,6 +11,7 @@ TARGET_VIEW_IDX = {40: [0, 6, 12, 18], #round_view = 24
 
 def load_all_images(asset_dir: str)->Dict[str, Image.Image]:
     # Get alpha
+
     rgba = Image.open(osp.join(asset_dir, 'rgb.png')).convert('RGBA')
     a = rgba.getchannel('A')
     
@@ -28,12 +29,20 @@ def load_all_images(asset_dir: str)->Dict[str, Image.Image]:
     metallic = _color_background(_metallic, a, (80,80,80))
     roughness = _color_background(_roughness, a, (80,80,80))
     
+    rgb = _downsample(rgb, 2)
+    albedo = _downsample(albedo, 2)
+    normal = _downsample(normal, 2)
+    metallic = _downsample(metallic, 2)
+    roughness = _downsample(roughness, 2)
     
     return {"rgb": rgb,
             "albedo": albedo,
             "normal_map": normal,
             "metallic_map": metallic,
             "roughness_map": roughness}
+
+def _downsample(image, scale):
+    return image.resize((image.size[0] // scale, image.size[1] // scale), Image.LANCZOS)
 
 def _color_background(image, alpha, background_color: Tuple[int]=(256,256,256)):
     
