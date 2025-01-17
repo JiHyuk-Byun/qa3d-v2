@@ -81,6 +81,7 @@ class LocalInferModel(BaseVLM):
                     print(f"response: {generated_text!r}")
             else:
                 generated_text = output.outputs[0].text
+                response.append(generated_text)
                 print(f"response: {generated_text!r}")
                 
             answers.append({'answers': response})
