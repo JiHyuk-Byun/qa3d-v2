@@ -45,11 +45,11 @@ class BaseVLM(ABC):
         pass
     
     @abstractmethod
-    def forward_vlm_chat(self, tgt_gids, criteria, batch_inputs):
+    def forward_vlm_chat(self, batch_inputs):
         pass
     
     @abstractmethod
-    def post_process(self, batch_outputset):
+    def post_process(self, gids, criteria, batch_outputset):
         pass
     
     # Create open-ai batch file format

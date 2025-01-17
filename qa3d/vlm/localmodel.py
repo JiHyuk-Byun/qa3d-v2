@@ -58,7 +58,7 @@ class LocalInferModel(BaseVLM):
             criteria.append(criterion)
         return gids, criteria, inputs
         
-    def forward_vlm_chat(self, tgt_gids, criteria, batch_inputs):
+    def forward_vlm_chat(self, batch_inputs):
     
         outputs = self.llm.generate(prompts=batch_inputs, sampling_params=self.sampling_params, use_tqdm=True)
         
