@@ -2,7 +2,10 @@
 ```
 pip install -r requirements.txt
 ```
-
+Install flash-attn for faster vlm inferencing
+```
+pip install flash-attn==2.7.3 --no-build-isolation
+```
 ## Step 2. Prepare datasets
 Prepare dataset and split .txt files
 ```
