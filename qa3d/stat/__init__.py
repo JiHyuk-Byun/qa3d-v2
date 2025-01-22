@@ -1,1 +1,0 @@
-from .stat_pilot import StatPilot

@@ -1,5 +1,0 @@
-transformers
-vllm=0.6.5
-omegaconf
-ninja
-flash-attn
